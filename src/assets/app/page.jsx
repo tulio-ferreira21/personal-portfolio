@@ -1,0 +1,12 @@
+import Header from "../components/header/header";
+import Hero from "../components/hero/hero";
+
+export default function Page(){
+    return (
+        <>
+            <Header />
+            <Hero />
+            <h3>Página Principal</h3>
+        </>
+    )
+}

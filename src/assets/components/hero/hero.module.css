@@ -1,0 +1,280 @@
+.hero {
+    position: relative;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    animation: inHero 0.5s ease-in-out;
+
+}
+
+.main {
+    font-size: 5rem;
+    color: #fff;
+    font-family: var(--font-space-grotesk);
+    font-weight: 900;
+    display: flex;
+    gap: 1rem;
+    text-shadow: 0px 0px 10px var(--primary);
+
+}
+
+.keys {
+    color: var(--primary);
+    text-shadow: 0px 0px 40px var(--primary);
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.8rem;
+    border-radius: 16px;
+    font-size: .8rem;
+    font-family: var(--font-jetbrains-mono);
+    color: #bebebe;
+    background-color: var(--muted);
+    border: 1px solid var(--muted-foreground);
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    animation: on 0.6s ease infinite alternate;
+    box-shadow: 0 0 0 var(--accent);
+}
+
+.typing {
+    font-size: 2rem;
+    font-family: var(--font-jetbrains-mono);
+    display: flex;
+    gap: 1rem;
+}
+
+.type {
+    color: var(--accent);
+}
+
+.typing span {
+    color: var(--muted-foreground);
+}
+
+.cta {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.terminal {
+    background-color: var(--muted);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+    border-radius: 16px;
+    font-family: var(--font-jetbrains-mono);
+    font-size: 1rem;
+    max-width: 600px;
+    width: 100%;
+}
+
+.contentTerminal {
+    color: var(--muted-foreground);
+    padding: .6rem;
+}
+
+.contentTerminal pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.contentTerminal span {
+    color: var(--accent);
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.contentTerminal b {
+    color: #fff;
+}
+
+.terminalHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.terminalHeader em {
+    color: var(--muted-foreground);
+}
+
+.dotYellow,
+.dotGreen,
+.dotRed {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.dotRed {
+    background-color: var(--destructive);
+}
+
+.dotYellow {
+    background-color: var(--dot-yellow);
+}
+
+.dotGreen {
+    background-color: var(--accent);
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.btnContact,
+.btnProjects {
+    padding: 0.6rem;
+    border: 1px solid var(--primary);
+    font-family: var(--font-jetbrains-mono);
+    color: var(--muted);
+    font-size: 1.1rem;
+    border-radius: 12px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.btnProjects {
+    background-color: var(--accent);
+    box-shadow: 0px 0px 5px var(--accent);
+
+}
+
+.btnContact {
+    color: var(--muted-foreground);
+    background-color: var(--muted);
+}
+
+.btnContact:hover,
+.btnProjects:hover {
+    box-shadow: 0px 0px 15px var(--accent);
+}
+
+.btnContact:hover {
+    color: #fff;
+}
+
+.scroll {
+    color: var(--muted-foreground);
+    font-family: var(--font-jetbrains-mono);
+}
+
+.scroll::after {
+    content: ' ∨';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    right: 50%;
+    transform: rotate(90deg);
+    animation: scrollBehavior 0.6s ease-in-out infinite;
+
+}
+
+@keyframes on {
+    from {
+        background-color: var(--accent);
+        box-shadow: 0 0 0 var(--accent);
+    }
+
+    to {
+        background-color: var(--ring);
+        box-shadow: 0 0 10px var(--accent);
+    }
+}
+
+@keyframes inHero {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scrollBehavior {
+
+    0%,
+    33% {
+        transform: translateY(10px);
+
+
+    }
+
+    34%,
+    66% {
+        transform: translateY(20px);
+    }
+
+    67%,
+    100% {
+        transform: translateY(30px);
+    }
+}
+
+@media (max-width: 640px) {
+    .main {
+        font-size: 3.5rem;
+    }
+
+    .typing {
+        font-size: 1.5rem;
+    }
+
+    .terminal {
+        font-size: .8rem;
+        max-width: 400px;
+        width: 100%;
+        padding: .5rem;
+
+    }
+}
+
+@media (max-width: 420px) {
+    .main {
+        font-size: 3rem;
+    }
+
+    .typing {
+        font-size: 1.2rem;
+    }
+
+    .contentTerminal span {
+        font-size: .7rem;
+    }
+}
+
+@media (max-width: 365px) {
+    .main {
+        font-size: 2.5rem;
+    }
+
+    .status {
+        font-size: .7rem;
+    }
+}
+@media (max-width: 320px){
+    .main{
+        font-size: 2rem;
+    }
+}

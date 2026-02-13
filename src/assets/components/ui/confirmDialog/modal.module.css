@@ -1,0 +1,117 @@
+@import '../../css/variables.css';
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000062;
+    z-index: 2000;
+    padding: 1rem;
+}
+
+.terminalHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.terminalHeader em {
+    color: var(--muted-foreground);
+}
+
+.dotYellow,
+.dotGreen,
+.dotRed {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.dotRed {
+    background-color: var(--destructive);
+}
+
+.dotYellow {
+    background-color: var(--dot-yellow);
+}
+
+.dotGreen {
+    background-color: var(--accent);
+}
+
+.containerDialog {
+    width: 100%;
+    max-width: 400px;
+    max-height: 90vh;
+    background-color: var(--muted);
+    border-radius: var(--radius-lg);
+    padding: 1rem;
+    color: var(--muted-foreground);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.containerDialog h3 {
+    color: #fff;
+    text-align: center;
+    font-family: var(--font-jetbrains-mono);
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+
+.containerDialog span {
+    font-family: var(--font-jetbrains-mono);
+    color: var(--primary);
+    text-shadow: 0px 0px 10px var(--accent);
+}
+
+.btnsChoose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btnPt,
+.btnEn {
+    border: 1px solid var(--primary);
+    padding: .6rem;
+    border-radius: 16px;
+    transition: 0.4s ease-in-out;
+    font-family: var(--font-space-grotesk);
+
+    cursor: pointer;
+}
+
+.btnPt {
+    background-color: var(--sidebar-primary);
+}
+
+.btnEn {
+    background-color: var(--muted);
+    color: #fff;
+}
+
+.btnEn:hover,
+.btnPt:hover {
+    box-shadow: 0px 0px 10px var(--primary);
+}
+
+@keyframes fadeIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
