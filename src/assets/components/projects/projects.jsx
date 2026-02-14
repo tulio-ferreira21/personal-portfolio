@@ -15,7 +15,7 @@ export default function Projects() {
             name: 'Pokemon Search',
             description: 'App que consome a PokéAPI para busca e exibição de Pokémon.',
             techs: ['HTML', 'SASS', 'JavaScript', 'Git & GitHub', 'VSCode'],
-            href: 'https://vercel.com/diegotulio27-2508s-projects/pokemon-search',
+            href: 'https://pokemon-search-sable.vercel.app/',
             repo: 'https://github.com/tulio-ferreira21/pokemon-search'
         },
         {
