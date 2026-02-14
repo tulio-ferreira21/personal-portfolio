@@ -68,10 +68,10 @@ export default function Projects() {
                                     <header>
                                         <h3>{project.name}</h3>
                                         <div className={styles.links}>
-                                            <a href="" title='Ir ao repositório'>
+                                            <a href={project.repo} target='_blank' title='Ir ao repositório'>
                                                 <SiGithub size={30} />
                                             </a>
-                                            <a href="" title='Ir ao site'>
+                                            <a href={project.href} target='_blank' title='Ir ao site'>
                                                 <FiExternalLink size={30} />
                                             </a>
                                         </div>
