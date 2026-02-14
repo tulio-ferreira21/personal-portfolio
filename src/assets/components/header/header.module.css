@@ -1,11 +1,15 @@
 @import '../css/variables.css';
 
 .header {
-    background-color: var(--primary-foreground);
     display: flex;
     justify-content: space-around;
     padding: 1rem;
-    z-index: 2;
+    z-index: 4;
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.699);
+    backdrop-filter: blur(10px);
+
 }
 
 .dev {
@@ -61,7 +65,7 @@
 }
 
 .contentMobile {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -70,13 +74,19 @@
     transform: translateY(-15px);
     animation: mobileMenu 0.35s ease forwards;
 
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.699);
+        backdrop-filter: blur(10px);
+
+    position: fixed;
+    top: 50px;
+    z-index: 3;
+    width: 100%;
+    padding-top: 16px;
 }
 
 
 .contentMobile a {
-    padding: .6rem;
+    padding: 16px;
 }
 
 @keyframes mobileMenu {
@@ -101,6 +111,10 @@
 
     .navMobile {
         display: block;
+    }
+
+    .contentMobile {
+        display: flex;
     }
 
     .nav {

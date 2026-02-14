@@ -6,6 +6,7 @@
             flex-direction: column;
 
             border-bottom: 1px solid var(--muted);
+            min-height: 100vh;
         }
 
         .container main {
@@ -48,6 +49,16 @@
             gap: 16px;
         }
 
+        .projects aside span {
+            color: var(--accent);
+            text-shadow: 0px 0px 10px var(--accent);
+        }
+
+        .projects aside {
+            font-family: var(--font-jetbrains-mono);
+            color: var(--muted-foreground);
+        }
+
         .cardProject {
             background-color: var(--muted);
             border-radius: 16px;
@@ -57,6 +68,9 @@
             flex-direction: column;
             gap: .6rem;
             font-family: var(--font-space-grotesk);
+            box-shadow: 0px 0px 15px var(--card-foreground);
+
+            transition: 0.3s;
         }
 
         .cardProject header {
@@ -102,7 +116,7 @@
         }
 
         .cardProject:hover {
-            border: 1px solid var(--accent);
+            transform: scale(1.02);
         }
 
         .links {
@@ -110,11 +124,27 @@
             gap: .6rem;
         }
 
+        .links a {
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+            color: var(--muted-foreground);
+        }
+
+        .links a:hover {
+            color: var(--accent);
+        }
+
+        .links a:active {
+            transform: scale(1.2);
+        }
+
         .wrapper {
             display: flex;
             flex-direction: column;
             max-width: 900px;
             width: 100%;
+
+            margin: auto;
         }
 
         @media (max-width: 630px) {

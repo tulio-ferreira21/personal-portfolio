@@ -16,25 +16,19 @@ export default function Header() {
                         </span>
                         sobre( )
                     </a>
-                    <a href="" className={styles.link}>
+                    <a href="#stacks" className={styles.link}>
                         <span className={styles.path}>
                             $
                         </span>
                         skills( )
                     </a>
-                    <a href="" className={styles.link}>
+                    <a href="#projects" className={styles.link}>
                         <span className={styles.path}>
                             $
                         </span>
                         projetos( )
                     </a>
-                    <a href="" className={styles.link}>
-                        <span className={styles.path}>
-                            $
-                        </span>
-                        xp( )
-                    </a>
-                    <a href="" className={styles.link}>
+                    <a href="#contact" className={styles.link}>
                         <span className={styles.path}>
                             $
                         </span>
@@ -55,25 +49,19 @@ export default function Header() {
                         </span>
                         sobre( )
                     </a>
-                    <a href="" className={styles.link}>
+                    <a href="#stacks" className={styles.link}>
                         <span className={styles.path}>
                             $
                         </span>
                         skills( )
                     </a>
-                    <a href="" className={styles.link}>
+                    <a href="#projects" className={styles.link}>
                         <span className={styles.path}>
                             $
                         </span>
                         projetos( )
                     </a>
-                    <a href="" className={styles.link}>
-                        <span className={styles.path}>
-                            $
-                        </span>
-                        xp( )
-                    </a>
-                    <a href="" className={styles.link}>
+                    <a href="#contact" className={styles.link}>
                         <span className={styles.path}>
                             $
                         </span>

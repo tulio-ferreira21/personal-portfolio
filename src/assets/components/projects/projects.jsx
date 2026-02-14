@@ -61,16 +61,18 @@ export default function Projects() {
                         </h4>
                     </header>
                     <div className={styles.wrapper}>
-                        <span>$</span> ls -l projects/
                         <section className={styles.projects}>
+                            <aside>
+                                <span>$~/user:</span> ls -l projects/
+                            </aside>
                             {Projects.map(project => (
                                 <div className={styles.cardProject}>
                                     <header>
                                         <h3>{project.name}</h3>
                                         <div className={styles.links}>
-                                            <a href={project.repo} target='_blank' title='Ir ao repositório'>
+                                            {project.repo ? <a href={project.repo} target='_blank' title='Ir ao repositório'>
                                                 <SiGithub size={30} />
-                                            </a>
+                                            </a> : ''}
                                             <a href={project.href} target='_blank' title='Ir ao site'>
                                                 <FiExternalLink size={30} />
                                             </a>
