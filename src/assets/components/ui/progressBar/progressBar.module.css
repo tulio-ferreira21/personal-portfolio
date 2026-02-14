@@ -1,0 +1,21 @@
+@import '../../css/variables.css';
+.wrapper{
+    padding: 1rem;
+}
+.Barwrapper {
+    width: 100%;
+    height: 8px;
+    background-color: var(--muted-foreground);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.bar {
+    height: 100%;
+    background: linear-gradient(90deg,
+            var(--accent),
+            var(--primary));
+    border-radius: 8px;
+    transition: width 0.6s ease-in-out;
+    box-shadow: 0 0 10px var(--accent);
+}

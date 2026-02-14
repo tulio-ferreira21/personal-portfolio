@@ -1,7 +1,14 @@
     @import '../css/variables.css';
 
     .container {
+        margin-top: .8rem;
         padding: .8rem;
+        border-bottom: 1px solid var(--muted);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 
     .containerHeader {
@@ -13,13 +20,6 @@
 
     .containerHeader .num {
         color: var(--accent);
-    }
-
-    .containerHeader hr {
-        background-color: #fff;
-        height: 2px;
-        width: auto;
-        padding: 0;
     }
 
     .containerHeader h4 {
@@ -41,13 +41,13 @@
 
     .gridInfos {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
         gap: 1.5rem;
         padding: 1.5rem;
     }
 
     .text {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-family: var(--font-space-grotesk);
         color: var(--muted-foreground);
         padding: .6rem;
@@ -74,7 +74,7 @@
 
     .cards {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 0.6rem;
     }
 
@@ -83,9 +83,11 @@
         padding: .6rem;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         border-radius: 16px;
         box-shadow: 0px 0px 15px var(--card-foreground);
         transition: 0.2s ease-in-out;
+        animation: glowAnimation 0.3s ease-in-out;
     }
 
     .card p {
@@ -104,15 +106,6 @@
     }
 
 
-    .terminalCat {
-        font-family: var(--font-space-grotesk);
-        background-color: var(--muted);
-        color: var(--muted-foreground);
-        padding: .6rem;
-        border-radius: 16px;
-        font-size: 1rem;
-    }
-
     .headerTerminal span {
         color: var(--primary);
         text-shadow: 0px 0px 10px var(--primary);
@@ -127,27 +120,94 @@
 
     }
 
-    .terminalCat p b {
-        color: #fff;
-        text-shadow: 0px 0px 0px;
+    .terminal {
+        background-color: var(--muted);
+        display: flex;
+        flex-direction: column;
+        gap: .7rem;
+        border-radius: 16px;
+        font-family: var(--font-jetbrains-mono);
         font-size: 1rem;
+        max-width: 600px;
+        width: 100%;
+        box-shadow: 0px 0px 15px var(--card-foreground);
+        animation: glowAnimation 0.3s ease-in-out;
+    }
+
+    .contentTerminal {
+        color: var(--muted-foreground);
+        padding: .6rem;
+    }
+
+
+    .contentTerminal span {
+        color: var(--accent);
+
+        overflow: hidden;
+        text-overflow: ellipsis;
 
     }
 
-    @media (max-width: 480px) {
-        .cards {
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    .contentTerminal b {
+        color: #fff;
+    }
+
+    .terminalHeader {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: .6rem;
+        border-bottom: 1px solid var(--muted-foreground);
+    }
+
+    .terminalHeader em {
+        color: var(--muted-foreground);
+    }
+
+    .dotYellow,
+    .dotGreen,
+    .dotRed {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+
+    .dotRed {
+        background-color: var(--destructive);
+    }
+
+    .dotYellow {
+        background-color: var(--dot-yellow);
+    }
+
+    .dotGreen {
+        background-color: var(--accent);
+    }
+
+    .gridTerminal {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        width: 100%;
+        gap: 1rem;
+
+    }
+
+    @keyframes glowAnimation {
+        from {
+            box-shadow: 0px 0px 15px var(--card-foreground);
+        }
+
+        to {
+            box-shadow: 0px 0px 30px var(--card-foreground);
+
         }
     }
 
     @media (max-width: 678px) {
         .text {
-            font-size: 1.1rem;
-            /* reduz um pouco o tamanho da fonte */
+            font-size: 1rem;
             padding: 0.5rem;
-            /* diminui padding lateral */
             gap: 0.8rem;
-            /* espaçamento menor entre itens */
         }
 
         .text p {
@@ -157,18 +217,31 @@
 
         .text b {
             font-size: 1.2rem;
-            /* ajusta títulos/destaques */
+        }
+
+        .contentTerminal p {
+            font-size: 1rem;
         }
     }
 
     @media (max-width: 480px) {
+        .containerHeader h4 {
+            font-size: 2rem;
+        }
+
+        .gridInfos {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+        }
+
+        .cards {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
         .text {
             font-size: 1rem;
-            /* fonte menor para celular pequeno */
             padding: 0.3rem;
-            /* padding bem pequeno */
             gap: 0.6rem;
-            /* gap reduzido */
         }
 
         .text p {
@@ -178,5 +251,9 @@
 
         .text b {
             font-size: 1.1rem;
+        }
+
+        .contentTerminal p {
+            font-size: .8rem;
         }
     }

@@ -1,0 +1,182 @@
+        @import '../css/variables.css';
+
+        .container {
+            margin-top: .8rem;
+            padding: .8rem;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            border-bottom: 1px solid var(--muted);
+        }
+
+        .container main {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .containerHeader {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-family: var(--font-jetbrains-mono);
+        }
+
+        .containerHeader .num {
+            color: var(--accent);
+        }
+
+        .containerHeader h4 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #fff;
+        }
+
+        .containerHeader h4::after {
+            content: " ";
+            flex: 1;
+            border-bottom: 1px solid var(--muted-foreground);
+        }
+
+        .containerHeader h4 span {
+            color: var(--accent);
+            text-shadow: 0px 0px 16px var(--primary);
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+            gap: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .gridStacks {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: .6rem;
+        }
+
+        .cardTech {
+            background-color: var(--card);
+            border-radius: 16px;
+            box-shadow: 0px 0px 15px var(--card-foreground);
+            animation: glowAnimation 0.3s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 1rem;
+            padding: .6rem;
+            aspect-ratio: 1 / 1;
+        }
+
+        .cardTech p {
+            font-family: var(--font-jetbrains-mono);
+            font-size: 1.3rem;
+            color: #fff;
+        }
+
+        .terminal {
+            background-color: var(--muted);
+            display: flex;
+            flex-direction: column;
+            gap: .7rem;
+            border-radius: 16px;
+            font-family: var(--font-jetbrains-mono);
+            font-size: 1rem;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0px 0px 15px var(--card-foreground);
+            animation: glowAnimation 0.3s ease-in-out;
+
+            max-width: 100%;
+        }
+
+        .contentTerminal {
+            color: var(--muted-foreground);
+            padding: .6rem;
+        }
+
+
+        .contentTerminal span {
+            color: var(--accent);
+            text-shadow: 0px 0px 16px var(--accent);
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+        }
+
+        .contentTerminal b {
+            color: #fff;
+        }
+
+        .terminalHeader {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: .6rem;
+            border-bottom: 1px solid var(--muted-foreground);
+        }
+
+        .terminalHeader em {
+            color: var(--primary);
+            font-weight: 900;
+            font-style: oblique;
+            font-family: var(--font-space-grotesk);
+        }
+
+        .dotYellow,
+        .dotGreen,
+        .dotRed {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .dotRed {
+            background-color: var(--destructive);
+        }
+
+        .dotYellow {
+            background-color: var(--dot-yellow);
+        }
+
+        .dotGreen {
+            background-color: var(--accent);
+        }
+
+        @keyframes glowAnimation {
+            from {
+                box-shadow: 0px 0px 15px var(--card-foreground);
+            }
+
+            to {
+                box-shadow: 0px 0px 30px var(--card-foreground);
+
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+            .gridStacks{
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            }
+            .containerHeader h4 {
+                font-size: 2rem;
+            }
+
+            .cardTech p {
+                font-size: .8rem;
+            }
+
+            .terminal {
+                font-size: .8rem;
+            }
+
+            .contentTerminal {
+                font-size: .8rem;
+            }
+        }

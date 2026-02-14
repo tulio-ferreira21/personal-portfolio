@@ -5,6 +5,7 @@
     flex-direction: column;
     padding: 0 3rem 0 3rem;
     backdrop-filter: blur(10px);
+    gap: 2rem;
 }
 
 @media (max-width: 678px) {
