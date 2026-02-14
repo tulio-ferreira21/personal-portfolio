@@ -7,7 +7,12 @@
     flex-direction: column;
     gap: 2rem;
     animation: inHero 0.5s ease-in-out;
+    min-height: 100vh;
+    border-bottom: 1px solid var(--muted);
+    z-index: 1;
 
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
 }
 
 .main {
@@ -71,7 +76,6 @@
 
 .terminal {
     background-color: var(--muted);
-    padding: 1rem;
     display: flex;
     flex-direction: column;
     gap: .7rem;
@@ -108,6 +112,8 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    padding: .6rem;
+    border-bottom: 1px solid var(--muted-foreground);
 }
 
 .terminalHeader em {
@@ -181,7 +187,7 @@
 .scroll::after {
     content: ' ∨';
     position: absolute;
-    bottom: -20px;
+    bottom: 20px;
     left: 50%;
     right: 50%;
     transform: rotate(90deg);
@@ -216,19 +222,19 @@
 
     0%,
     33% {
-        transform: translateY(10px);
+        transform: translateY(-10px);
 
 
     }
 
     34%,
     66% {
-        transform: translateY(20px);
+        transform: translateY(-20px);
     }
 
     67%,
     100% {
-        transform: translateY(30px);
+        transform: translateY(-30px);
     }
 }
 
@@ -273,8 +279,9 @@
         font-size: .7rem;
     }
 }
-@media (max-width: 320px){
-    .main{
+
+@media (max-width: 320px) {
+    .main {
         font-size: 2rem;
     }
 }

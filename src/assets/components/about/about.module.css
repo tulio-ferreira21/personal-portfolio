@@ -1,0 +1,182 @@
+    @import '../css/variables.css';
+
+    .container {
+        padding: .8rem;
+    }
+
+    .containerHeader {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-family: var(--font-jetbrains-mono);
+    }
+
+    .containerHeader .num {
+        color: var(--accent);
+    }
+
+    .containerHeader hr {
+        background-color: #fff;
+        height: 2px;
+        width: auto;
+        padding: 0;
+    }
+
+    .containerHeader h4 {
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: #fff;
+    }
+
+    .containerHeader h4::after {
+        content: " ";
+        flex: 1;
+        border-bottom: 1px solid var(--muted-foreground);
+    }
+
+    .containerHeader h4 span {
+        color: var(--accent);
+        text-shadow: 0px 0px 16px var(--primary);
+    }
+
+    .gridInfos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .text {
+        font-size: 1.2rem;
+        font-family: var(--font-space-grotesk);
+        color: var(--muted-foreground);
+        padding: .6rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .text p {
+        width: 100%;
+        line-height: 1.6
+    }
+
+    .text span {
+        color: #fff;
+    }
+
+    .text b {
+        color: var(--primary);
+        text-shadow: 0px 0px 10px var(--primary);
+        font-weight: 900;
+        font-size: 1.3rem;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 0.6rem;
+    }
+
+    .card {
+        background-color: var(--card);
+        padding: .6rem;
+        display: flex;
+        flex-direction: column;
+        border-radius: 16px;
+        box-shadow: 0px 0px 15px var(--card-foreground);
+        transition: 0.2s ease-in-out;
+    }
+
+    .card p {
+        font-family: var(--font-space-grotesk);
+        color: var(--muted-foreground);
+    }
+
+    .card b {
+        font-family: var(--font-jetbrains-mono);
+        color: #fff;
+    }
+
+    .card:hover {
+        transform: scale(1.02);
+        box-shadow: 0px 0px 25px var(--card-foreground);
+    }
+
+
+    .terminalCat {
+        font-family: var(--font-space-grotesk);
+        background-color: var(--muted);
+        color: var(--muted-foreground);
+        padding: .6rem;
+        border-radius: 16px;
+        font-size: 1rem;
+    }
+
+    .headerTerminal span {
+        color: var(--primary);
+        text-shadow: 0px 0px 10px var(--primary);
+        font-size: 1rem;
+
+    }
+
+    .headerTerminal b {
+        color: #fff;
+        text-shadow: 0px 0px 0px;
+        font-size: 1rem;
+
+    }
+
+    .terminalCat p b {
+        color: #fff;
+        text-shadow: 0px 0px 0px;
+        font-size: 1rem;
+
+    }
+
+    @media (max-width: 480px) {
+        .cards {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+    }
+
+    @media (max-width: 678px) {
+        .text {
+            font-size: 1.1rem;
+            /* reduz um pouco o tamanho da fonte */
+            padding: 0.5rem;
+            /* diminui padding lateral */
+            gap: 0.8rem;
+            /* espaçamento menor entre itens */
+        }
+
+        .text p {
+            font-size: 1rem;
+            text-align: justify;
+        }
+
+        .text b {
+            font-size: 1.2rem;
+            /* ajusta títulos/destaques */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .text {
+            font-size: 1rem;
+            /* fonte menor para celular pequeno */
+            padding: 0.3rem;
+            /* padding bem pequeno */
+            gap: 0.6rem;
+            /* gap reduzido */
+        }
+
+        .text p {
+            font-size: 0.95rem;
+            text-align: justify;
+        }
+
+        .text b {
+            font-size: 1.1rem;
+        }
+    }

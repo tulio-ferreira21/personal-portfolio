@@ -1,14 +1,16 @@
-import { useState } from 'react'
-import Typing from '../ui/typed'
-import Terminal from '../ui/typedStacks'
-import styles from './hero.module.css'
-import ConfirmDialog from '../ui/confirmDialog/confirmDialog'
+import { useState } from 'react';
+import Typing from '../ui/typed';
+import Terminal from '../ui/typedStacks';
+import styles from './hero.module.css';
+import ConfirmDialog from '../ui/confirmDialog/confirmDialog';
 export default function Hero() {
-    const [confirmDialog, setConfirmDialog] = useState(false)
+    const [confirmDialog, setConfirmDialog] = useState(false);
+
     return (
         <>
             {confirmDialog && <ConfirmDialog onClose={() => setConfirmDialog(false)} />}
-            <div className={styles.overflow}></div>
+
+
             <div className={styles.hero}>
                 <div className={styles.status}>
                     <div className={styles.dot}></div>
@@ -45,8 +47,6 @@ export default function Hero() {
                         <button className={styles.btnContact} onClick={() => setConfirmDialog(true)}>
                             baixar_cv()
                         </button>
-
-
                     </div>
                 </div>
                 <div className={styles.scroll}>
@@ -54,5 +54,5 @@ export default function Hero() {
                 </div>
             </div>
         </>
-    )
+    );
 }

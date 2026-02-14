@@ -13,8 +13,8 @@ export default function Typing() {
                 "Bootstrap e SASS",
                 "JavaScript e TypeScript",
             ],
-            typeSpeed: 100,
-            backSpeed: 200,
+            typeSpeed: 18,
+            backSpeed: 20,
             backDelay: 5000,
             loop: true,
         });

@@ -1,0 +1,65 @@
+.terminal {
+    background-color: var(--muted);
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+    border-radius: 16px;
+    font-family: var(--font-jetbrains-mono);
+    font-size: 1rem;
+    max-width: 600px;
+    width: 100%;
+}
+
+.contentTerminal {
+    color: var(--muted-foreground);
+    padding: .6rem;
+}
+
+.contentTerminal pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.contentTerminal span {
+    color: var(--accent);
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.contentTerminal b {
+    color: #fff;
+}
+
+.terminalHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: .6rem;
+    border-bottom: 1px solid var(--muted-foreground);
+}
+
+.terminalHeader em {
+    color: var(--muted-foreground);
+}
+
+.dotYellow,
+.dotGreen,
+.dotRed {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.dotRed {
+    background-color: var(--destructive);
+}
+
+.dotYellow {
+    background-color: var(--dot-yellow);
+}
+
+.dotGreen {
+    background-color: var(--accent);
+}

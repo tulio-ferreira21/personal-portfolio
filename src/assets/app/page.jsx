@@ -1,12 +1,18 @@
+import About from "../components/about/about";
 import Header from "../components/header/header";
 import Hero from "../components/hero/hero";
-
-export default function Page(){
+import MatrixRainComponent from "../components/ui/MatrixRain";
+import styles from './page.module.css'
+export default function Page() {
     return (
+
         <>
+            <MatrixRainComponent />
             <Header />
             <Hero />
-            <h3>Página Principal</h3>
+            <div className={styles.content}>
+                <About />
+            </div>
         </>
     )
 }

@@ -1,0 +1,19 @@
+@import '../components/css/variables.css';
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 3rem 0 3rem;
+    backdrop-filter: blur(10px);
+}
+
+@media (max-width: 678px) {
+    .content {
+        padding: 0 2rem 0 2rem;
+    }
+}
+@media (max-width: 480px) {
+    .content{
+        padding: 0;
+    }
+}

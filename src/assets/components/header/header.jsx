@@ -10,7 +10,7 @@ export default function Header() {
                     {`>`}_ ~/dev
                 </div>
                 <div className={styles.nav}>
-                    <a href="" className={styles.link}>
+                    <a href="#aboutme" className={styles.link}>
                         <span className={styles.path}>
                             $
                         </span>
@@ -49,7 +49,7 @@ export default function Header() {
             </header>
             {
                 displayNavMobile && <div className={styles.contentMobile}>
-                    <a href="" className={styles.link}>
+                    <a href="#aboutme" className={styles.link}>
                         <span className={styles.path}>
                             $
                         </span>

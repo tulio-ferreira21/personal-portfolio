@@ -5,6 +5,7 @@
     display: flex;
     justify-content: space-around;
     padding: 1rem;
+    z-index: 2;
 }
 
 .dev {
@@ -68,6 +69,9 @@
     opacity: 0;
     transform: translateY(-15px);
     animation: mobileMenu 0.35s ease forwards;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
 }
 
 
