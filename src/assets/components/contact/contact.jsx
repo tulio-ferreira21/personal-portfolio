@@ -10,13 +10,18 @@ export default function Contact() {
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
 
+    const [disabled, setDisabled] = useState(false)
+
     function handleSubmit(e) {
         e.preventDefault()
         if (!name || !email || !message) {
             toast.error('Informe todos os campos')
             return
         }
-
+        if(!email.endsWith('@gmail.com')){
+            toast.warning('Email inválido')
+        }
+        setDisabled(true)
         emailjs.send(
             "service_keo39td",
             "template_auj3uaa",
@@ -32,9 +37,11 @@ export default function Contact() {
                 setName('')
                 setEmail('')
                 setMessage('')
+                setDisabled(false)
             })
-            .catch(()=>{
+            .catch(() => {
                 toast.error('Erro no envio')
+                setDisabled(false)
             })
     }
     return (
@@ -119,7 +126,9 @@ export default function Contact() {
                                     <textarea type="text" value={message} placeholder="Mensagem..." onChange={(e) => setMessage(e.target.value)} />
                                 </div>
                                 <div className={styles.inputTerminal}>
-                                    <button type="submit">
+                                    <button type="submit" disabled={disabled}
+                                        style={{ backgroundColor: `${disabled ? `hsl(120, 93%, 38%)` : 'hsl(120 100% 50%)'}` }}
+                                    >
                                         <FaPaperPlane size={20} />
                                         enviar_mensagem()
                                     </button>

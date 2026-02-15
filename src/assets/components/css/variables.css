@@ -33,7 +33,7 @@
   --destructive-foreground: hsl(0 0% 98%);
   --border: hsl(120 20% 12%);
   --input: hsl(120 20% 12%);
-  --ring: hsl(120 100% 50%);
+  --ring: hsl(120, 83%, 28%);
   --dot-yellow: hsl(76, 100%, 50%);
 }
 

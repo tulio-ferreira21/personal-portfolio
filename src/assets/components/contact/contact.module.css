@@ -86,9 +86,12 @@
    }
 
    .row a {
+       display: flex;
+       flex-wrap: wrap;
+       word-break: break-word;
        text-decoration: none;
-   }
 
+   }
    .row a:hover span {
        text-decoration: underline;
    }
@@ -181,8 +184,7 @@
    }
 
    .inputTerminal button:hover {
-       background-color: var(--card-foreground);
-       color: white;
+       box-shadow: 0px 0px 10px var(--accent);
    }
 
    @media (max-width:1200px) {
@@ -196,10 +198,20 @@
        .containerHeader h4 {
            font-size: 2.2rem;
        }
+
+       .cta p {
+           font-size: 1rem;
+       }
+
    }
 
    @media (max-width: 480px) {
        .containerHeader h4 {
            font-size: 2rem;
        }
+
+       .cta p {
+           font-size: .6rem;
+       }
+
    }
