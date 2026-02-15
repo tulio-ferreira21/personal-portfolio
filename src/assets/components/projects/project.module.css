@@ -62,13 +62,12 @@
         .cardProject {
             background-color: var(--muted);
             border-radius: 16px;
-            box-shadow: 0px 0px 0px var(--accent);
             padding: 1.2rem;
             display: flex;
             flex-direction: column;
             gap: .6rem;
             font-family: var(--font-space-grotesk);
-            box-shadow: 0px 0px 15px var(--card-foreground);
+            box-shadow: 0px 0px 10px var(--card-foreground);
 
             transition: 0.3s;
         }
@@ -102,7 +101,6 @@
 
         .tech {
             background-color: var(--card-foreground);
-            backdrop-filter: blur(10px);
             padding: .5rem;
             border-radius: 16px;
             font-size: .8rem;

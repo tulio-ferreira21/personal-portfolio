@@ -65,8 +65,8 @@ export default function Projects() {
                             <aside>
                                 <span>$~/user:</span> ls -l projects/
                             </aside>
-                            {Projects.map(project => (
-                                <div className={styles.cardProject}>
+                            {Projects.map( (project, index) => (
+                                <div key={index} className={styles.cardProject}>
                                     <header>
                                         <h3>{project.name}</h3>
                                         <div className={styles.links}>
