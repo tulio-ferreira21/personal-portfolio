@@ -38,7 +38,7 @@ export default function Hero() {
                         </div>
                     </div>
                     <div className={styles.buttons}>
-                        <a href="">
+                        <a href="#projects">
                             <button className={styles.btnProjects}>
                                 ver_projetos()
                             </button>
@@ -49,9 +49,11 @@ export default function Hero() {
                         </button>
                     </div>
                 </div>
-                <div className={styles.scroll}>
-                    scroll()
-                </div>
+                <a href="#aboutme" style={{textDecoration: 'none'}}>
+                    <div className={styles.scroll}>
+                        scroll()
+                    </div>
+                </a>
             </div>
         </>
     );

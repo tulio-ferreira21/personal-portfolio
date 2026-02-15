@@ -87,7 +87,6 @@
         border-radius: 16px;
         box-shadow: 0px 0px 15px var(--card-foreground);
         transition: 0.2s ease-in-out;
-        animation: glowAnimation 0.3s ease-in-out;
     }
 
     .card p {
@@ -131,7 +130,6 @@
         max-width: 600px;
         width: 100%;
         box-shadow: 0px 0px 15px var(--card-foreground);
-        animation: glowAnimation 0.3s ease-in-out;
     }
 
     .contentTerminal {
@@ -190,17 +188,6 @@
         width: 100%;
         gap: 1rem;
 
-    }
-
-    @keyframes glowAnimation {
-        from {
-            box-shadow: 0px 0px 15px var(--card-foreground);
-        }
-
-        to {
-            box-shadow: 0px 0px 30px var(--card-foreground);
-
-        }
     }
 
     @media (max-width: 678px) {

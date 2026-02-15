@@ -93,13 +93,13 @@ export default function About() {
                         </div>
                         <div className={styles.contentTerminal}>
                             <div className={styles.headerTerminal}>
-                                <span>$</span> <b>cat</b> -u tulio info.json
+                                <span>$~/user:</span> <b>cat</b> -u tulio info.json
                             </div>
                             <br />
                             <p>
-                                <b>localizacao: </b> 'Brasil' <br /> <br />
-                                <b>experiencia: </b> '+1 ano' <br /> <br />
-                                <b>foco: </b> 'Desenvolvimento Front-End' <br /> <br />
+                                <b>localizacao: </b> 'Pernambuco, Brasil' <br />
+                                <b>experiencia: </b> '+1 ano' <br />
+                                <b>foco: </b> 'Desenvolvimento Front-End' <br />
                                 <b>idiomas: </b> 'PT-BR, EN'
                             </p>
                         </div>

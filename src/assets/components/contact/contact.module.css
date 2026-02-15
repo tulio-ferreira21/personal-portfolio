@@ -1,0 +1,205 @@
+   @import '../css/variables.css';
+
+   .container {
+       margin-top: .8rem;
+       padding: .8rem;
+       display: flex;
+       justify-content: center;
+       flex-direction: column;
+       gap: 2rem;
+       min-height: 100vh;
+       border-bottom: 1px solid var(--muted);
+   }
+
+   .container main {
+       display: flex;
+       flex-direction: column;
+       gap: 2rem;
+   }
+
+   .containerHeader {
+       display: flex;
+       align-items: center;
+       gap: 1rem;
+       font-family: var(--font-jetbrains-mono);
+   }
+
+   .containerHeader .num {
+       color: var(--accent);
+   }
+
+   .containerHeader h4 {
+       font-size: 2.5rem;
+       font-weight: 900;
+       color: #fff;
+   }
+
+   .containerHeader h4::after {
+       content: " ";
+       flex: 1;
+       border-bottom: 1px solid var(--muted-foreground);
+   }
+
+   .containerHeader h4 span {
+       color: var(--accent);
+       text-shadow: 0px 0px 16px var(--primary);
+   }
+
+   .terminal {
+       background-color: var(--muted);
+       display: flex;
+       flex-direction: column;
+       gap: .7rem;
+       border-radius: 16px;
+       font-family: var(--font-jetbrains-mono);
+       font-size: 1rem;
+       box-shadow: 0px 0px 15px var(--card-foreground);
+   }
+
+   .contentTerminal {
+       color: var(--muted-foreground);
+       padding: .6rem;
+   }
+
+
+   .contentTerminal span {
+       color: var(--accent);
+
+       overflow: hidden;
+       text-overflow: ellipsis;
+
+   }
+
+   .contentTerminal b {
+       color: #fff;
+
+   }
+
+   .row,
+   .row b {
+       display: flex;
+       align-items: center;
+       gap: .3rem;
+       padding: .6rem;
+
+       flex-wrap: wrap;
+   }
+
+   .row a {
+       text-decoration: none;
+   }
+
+   .row a:hover span {
+       text-decoration: underline;
+   }
+
+   .terminalHeader {
+       display: flex;
+       align-items: center;
+       gap: 0.5rem;
+       padding: .6rem;
+       border-bottom: 1px solid var(--muted-foreground);
+   }
+
+   .terminalHeader em {
+       color: var(--muted-foreground);
+   }
+
+   .dotYellow,
+   .dotGreen,
+   .dotRed {
+       width: 10px;
+       height: 10px;
+       border-radius: 50%;
+   }
+
+   .dotRed {
+       background-color: var(--destructive);
+   }
+
+   .dotYellow {
+       background-color: var(--dot-yellow);
+   }
+
+   .dotGreen {
+       background-color: var(--accent);
+   }
+
+   .content {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+   }
+
+   .cta {
+       display: flex;
+       flex-direction: column;
+       gap: 2rem;
+       padding: 1.4rem;
+   }
+
+   .cta p {
+       display: flex;
+       flex-wrap: wrap;
+       color: var(--muted-foreground);
+       padding: 1rem;
+       font-family: var(--font-jetbrains-mono);
+       max-width: 600px;
+       font-size: 1.1rem;
+   }
+
+   .inputTerminal {
+       display: flex;
+       flex-direction: column;
+       gap: .6rem;
+       padding: 1rem;
+   }
+
+   .inputTerminal input,
+   .inputTerminal textarea {
+       background-color: var(--card);
+       border: 1px solid #00000067;
+       padding: 1rem;
+       border-radius: .6rem;
+       color: white;
+       font-size: .9rem;
+       font-family: var(--font-space-grotesk);
+   }
+
+   .inputTerminal button {
+       background-color: var(--accent);
+       border: 1px solid var(--primary);
+       padding: .5rem;
+       border-radius: 1rem;
+       font-size: .9rem;
+       font-family: var(--font-jetbrains-mono);
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       gap: .6rem;
+       cursor: pointer;
+       transition: 0.5s ease-in-out;
+   }
+
+   .inputTerminal button:hover {
+       background-color: var(--card-foreground);
+       color: white;
+   }
+
+   @media (max-width:1200px) {
+       .content {
+           display: flex;
+           flex-direction: column;
+       }
+   }
+
+   @media (max-width: 560px) {
+       .containerHeader h4 {
+           font-size: 2.2rem;
+       }
+   }
+
+   @media (max-width: 480px) {
+       .containerHeader h4 {
+           font-size: 2rem;
+       }
+   }
