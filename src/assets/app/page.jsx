@@ -6,6 +6,7 @@ import Projects from "../components/projects/projects";
 import TechStack from "../components/techStack/techStack";
 import MatrixRainComponent from "../components/ui/MatrixRain";
 import styles from './page.module.css'
+
 export default function Page() {
     return (
 
