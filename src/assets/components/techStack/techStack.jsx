@@ -11,7 +11,8 @@ import {
     SiGithub,
     SiSupabase,
     SiNotion,
-    SiSqlite
+    SiSqlite,
+    SiTailwindcss
 } from 'react-icons/si'
 
 import { VscVscode } from 'react-icons/vsc'
@@ -27,6 +28,7 @@ export default function TechStack() {
         { name: 'React', Icon: SiReact, type: 'framework' },
         { name: 'Bootstrap', Icon: SiBootstrap, type: 'framework' },
         { name: 'Sass', Icon: SiSass, type: 'framework' },
+        { name: 'TailwindCSS', Icon: SiTailwindcss, type: 'framework' },
 
         { name: 'Git', Icon: SiGit, type: 'tool' },
         { name: 'GitHub', Icon: SiGithub, type: 'tool' },
