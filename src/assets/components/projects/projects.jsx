@@ -3,6 +3,11 @@ import { SiGithub } from 'react-icons/si'
 import { FiExternalLink } from 'react-icons/fi'
 import catalogo from '../../../../public/imgs-projects/b&b.png'
 import pokemonSearch from '../../../../public/imgs-projects/pokemon-search.png'
+import birthdayOrg from "../../../../public/imgs-projects/birthday-oganization.png"
+import worldCountries from "../../../../public/imgs-projects/world-countries.png"
+import gateboard from "../../../../public/imgs-projects/gateboard.png"
+import portfolio from "../../../../public/imgs-projects/portfolio.png"
+import football from "../../../../public/imgs-projects/football.png"
 export default function Projects() {
     const Projects = [
         {
@@ -14,7 +19,7 @@ export default function Projects() {
             repo: null
         },
         {
-            img: pokemonSearch ,
+            img: pokemonSearch,
             name: 'Pokemon Search',
             description: 'App que consome a PokéAPI para busca e exibição de Pokémon.',
             techs: ['HTML', 'SASS', 'JavaScript'],
@@ -22,7 +27,7 @@ export default function Projects() {
             repo: 'https://github.com/tulio-ferreira21/pokemon-search'
         },
         {
-            img: "../../../../public/imgs-projects/birthday-oganization.png",
+            img: birthdayOrg,
             name: 'Birthday Organization',
             description: 'SPA para organização e controle financeiro de eventos com dashboard de gráficos.',
             techs: ['React', 'JavaScript', 'CSS'],
@@ -30,7 +35,7 @@ export default function Projects() {
             repo: 'https://github.com/tulio-ferreira21/birthday-organization'
         },
         {
-            img: "../../../../public/imgs-projects/world-countries.png" ,
+            img: worldCountries,
             name: 'World Countries',
             description: 'App em React que consome API para listar países com mapa interativo.',
             techs: ['React', 'JavaScript', 'CSS'],
@@ -38,7 +43,7 @@ export default function Projects() {
             repo: 'https://github.com/tulio-ferreira21/world-countries-explorer'
         },
         {
-            img: "../../../../public/imgs-projects/gateboard.png",
+            img: gateboard,
             name: 'GateBoard',
             description: 'Plataforma Kanban com autenticação frontend e persistência via localStorage.',
             techs: ['React', 'TypeScript', 'CSS'],
@@ -46,7 +51,7 @@ export default function Projects() {
             repo: 'https://github.com/tulio-ferreira21/GateBoard'
         },
         {
-            img: "../../../../public/imgs-projects/portfolio.png",
+            img: portfolio,
             name: 'Portfólio Pessoal',
             description: 'Portfólio em React com layout responsivo e estrutura modular.',
             techs: ['React', 'JavaScript', 'CSS'],
@@ -54,7 +59,7 @@ export default function Projects() {
             repo: 'https://github.com/tulio-ferreira21/personal-portfolio'
         },
         {
-            img: "../../../../public/imgs-projects/football.png",
+            img: football,
             name: "Foot & Ball",
             description: "Jogo de simulador de manager criado para o Hackathon da ZK Gaming",
             href: "https://football-ecru.vercel.app/",
