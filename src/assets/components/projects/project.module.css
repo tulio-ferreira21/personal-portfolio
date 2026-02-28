@@ -7,6 +7,8 @@
 
             border-bottom: 1px solid var(--muted);
             min-height: 100vh;
+
+            overflow-x: none;
         }
 
         .container main {
@@ -58,7 +60,10 @@
             font-family: var(--font-jetbrains-mono);
             color: var(--muted-foreground);
         }
-
+        .projects strong{
+            font-family: var(--font-space-grotesk);
+            color: var(--muted-foreground);
+        }
         .cardProject {
             background-color: var(--muted);
             border-radius: 16px;
@@ -91,7 +96,15 @@
             max-width: 500px;
             text-align: justify;
         }
-
+        .cardProject img{
+            border-radius:  20px;        
+            height: 0px;
+            object-fit: cover;    
+            transition: 0.3s ease-in-out;
+        }
+        .cardProject:hover img{
+            height: 200px;
+        }
         .techs {
             display: flex;
             justify-content: flex-end;
