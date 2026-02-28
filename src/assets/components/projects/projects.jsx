@@ -1,10 +1,12 @@
 import styles from './project.module.css'
 import { SiGithub } from 'react-icons/si'
 import { FiExternalLink } from 'react-icons/fi'
+import catalogo from '../../../../public/imgs-projects/b&b.png'
+import pokemonSearch from '../../../../public/imgs-projects/pokemon-search.png'
 export default function Projects() {
     const Projects = [
         {
-            img: '../../../../public/imgs-projects/b&b.png',
+            img: catalogo,
             name: 'Catálogo B&B',
             description: 'Catálogo web para exposição de produtos com integração ao Supabase.',
             techs: ['HTML', 'CSS', 'JavaScript', 'Supabase'],
@@ -12,7 +14,7 @@ export default function Projects() {
             repo: null
         },
         {
-            img: "../../../../public/imgs-projects/pokemon-search.png" ,
+            img: pokemonSearch ,
             name: 'Pokemon Search',
             description: 'App que consome a PokéAPI para busca e exibição de Pokémon.',
             techs: ['HTML', 'SASS', 'JavaScript'],
