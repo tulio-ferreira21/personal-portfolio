@@ -38,7 +38,7 @@ export default function Projects() {
             img: worldCountries,
             name: 'World Countries',
             description: 'App em React que consome API para listar países com mapa interativo.',
-            techs: ['React', 'JavaScript', 'CSS'],
+            techs: ['React', 'JavaScript', 'CSS', "BootStrap"],
             href: 'https://world-countries-explorer-iota.vercel.app/',
             repo: 'https://github.com/tulio-ferreira21/world-countries-explorer'
         },
