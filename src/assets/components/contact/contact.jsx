@@ -81,7 +81,7 @@ export default function Contact() {
                                     </div>
                                     <div className={styles.row}>
                                         <b><BsLinkedin size={20} />Linkedin: </b>
-                                        <a href="www.linkedin.com/in/tuliodiego">
+                                        <a href="linkedin.com/in/tuliodiego">
                                             <span>'www.linkedin.com/in/tuliodiego'</span>
                                         </a>
                                     </div>
