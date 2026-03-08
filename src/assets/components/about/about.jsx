@@ -1,34 +1,6 @@
 import styles from './about.module.css'
-import {
-    FaHandshake,
-    FaLightbulb,
-    FaCode,
-    FaBook
-} from "react-icons/fa";
-
+import imgOwner from '../../../../public/foto-tulio.png'
 export default function About() {
-    const cardsQualitys = [
-        {
-            icon: <FaHandshake color='hsl(120 60% 40%)' size={38} />,
-            name: 'Vontade de aprender',
-            description: 'Não é possível evoluir se nem sequer tens a vontade de aprender.',
-        },
-        {
-            icon: <FaLightbulb color='hsl(120 60% 40%)' size={38} />,
-            name: 'Comprometimento',
-            description: 'Valorizo responsabilidade, disciplina e foco em entregar soluções funcionais e bem estruturadas.'
-        },
-        {
-            icon: <FaCode color='hsl(120 60% 40%)' size={38} />,
-            name: 'Código Organizado',
-            description: 'Sempre prezando pelas boas maneiras da programação e pelo código limpo e intuitivo '
-        },
-        {
-            icon: <FaBook color='hsl(120 60% 40%)' size={38} />,
-            name: 'Inovação',
-            description: 'Sempre buscando aprender as novas tecnologias e inovar em minhas aplicações'
-        }
-    ]
     return (
         <>
             <div className={styles.container} id='aboutme'>
@@ -64,21 +36,11 @@ export default function About() {
 
                         </div>
 
-                        <div className={styles.cards}>
-                            {cardsQualitys.map((card, index) => (
-                                <div key={index} className={styles.card}>
-                                    <figure>
-                                        {card.icon}
-                                    </figure>
-                                    <b>
-                                        {card.name}
-                                    </b>
-                                    <p>
-                                        {card.description}
-                                    </p>
-                                </div>
-                            ))}
-                        </div>
+                        <figure className={styles.cards}>
+                            <div className={styles.imgOwner}>
+                                <img src={imgOwner} alt="Imagem do criador - Túlio Diego" />
+                            </div>
+                        </figure>
                     </section>
 
                 </div>

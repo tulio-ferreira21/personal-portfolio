@@ -11,11 +11,7 @@ export default function Hero() {
             {confirmDialog && <ConfirmDialog onClose={() => setConfirmDialog(false)} />}
 
 
-            <div className={styles.hero}>
-                <div className={styles.status}>
-                    <div className={styles.dot}></div>
-                    STATUS: DISPONÍVEL PARA PROJETOS
-                </div>
+            <section className={styles.hero}>
                 <div className={styles.main}>
                     <span className={styles.keys}>{`{`}</span>
                     Túlio Diego
@@ -49,12 +45,12 @@ export default function Hero() {
                         </button>
                     </div>
                 </div>
-                <a href="#aboutme" style={{textDecoration: 'none'}}>
+                <a href="#aboutme" style={{ textDecoration: 'none' }}>
                     <div className={styles.scroll}>
                         scroll()
                     </div>
                 </a>
-            </div>
+            </section>
         </>
     );
 }
