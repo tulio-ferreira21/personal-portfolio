@@ -8,8 +8,10 @@ import worldCountries from "../../../../public/imgs-projects/world-countries.png
 import gateboard from "../../../../public/imgs-projects/gateboard.png"
 import portfolio from "../../../../public/imgs-projects/portfolio.png"
 import football from "../../../../public/imgs-projects/football.png"
+import gamevault from '../../../../public/imgs-projects/gamevault.png'
 export default function Projects() {
     const Projects = [
+
         {
             img: catalogo,
             name: 'Catálogo B&B',
@@ -65,7 +67,15 @@ export default function Projects() {
             href: "https://football-ecru.vercel.app/",
             repo: "https://github.com/tulio-ferreira21/football",
             techs: ["React", 'TypeScript', 'TailwindCSS']
-        }
+        },
+        {
+            img: gamevault,
+            name: "GameVault",
+            description: "Plataforma de biblioteca de jogos pessoal",
+            href: "https://game-vault-web-app.vercel.app/",
+            repo: null,
+            techs: ["React", 'TypeScript', 'TailwindCSS', 'NodeJS']
+        }   
     ]
 
     return (
@@ -85,32 +95,34 @@ export default function Projects() {
                             <aside>
                                 <span>$~/user:</span> ls -l projects/
                             </aside>
-                            {Projects.map((project, index) => (
-                                <div key={index} className={styles.cardProject}>
-                                    <img src={project.img} />
-                                    <header>
-                                        <h3>{project.name}</h3>
-                                        <div className={styles.links}>
-                                            {project.repo ? <a href={project.repo} target='_blank' title='Ir ao repositório'>
-                                                <SiGithub size={30} />
-                                            </a> : ''}
-                                            <a href={project.href} target='_blank' title='Ir ao site'>
-                                                <FiExternalLink size={30} />
-                                            </a>
-                                        </div>
-                                    </header>
-                                    <p>
-                                        {project.description}
-                                    </p>
-                                    <div className={styles.techs}>
-                                        {project.techs.map(tech => (
-                                            <div className={styles.tech}>
-                                                {tech}
+                            <div className={styles.gridProjects}>
+                                {Projects.map((project, index) => (
+                                    <div key={index} className={styles.cardProject}>
+                                        <img src={project.img} />
+                                        <header>
+                                            <h3>{project.name}</h3>
+                                            <div className={styles.links}>
+                                                {project.repo ? <a href={project.repo} target='_blank' title='Ir ao repositório'>
+                                                    <SiGithub size={30} />
+                                                </a> : ''}
+                                                <a href={project.href} target='_blank' title='Ir ao site'>
+                                                    <FiExternalLink size={30} />
+                                                </a>
                                             </div>
-                                        ))}
+                                        </header>
+                                        <p>
+                                            {project.description}
+                                        </p>
+                                        <div className={styles.techs}>
+                                            {project.techs.map(tech => (
+                                                <div className={styles.tech}>
+                                                    {tech}
+                                                </div>
+                                            ))}
+                                        </div>
                                     </div>
-                                </div>
-                            ))}
+                                ))}
+                            </div>
                         </section>
                     </div>
                 </main>

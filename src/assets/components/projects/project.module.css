@@ -60,10 +60,12 @@
             font-family: var(--font-jetbrains-mono);
             color: var(--muted-foreground);
         }
-        .projects strong{
+
+        .projects strong {
             font-family: var(--font-space-grotesk);
             color: var(--muted-foreground);
         }
+
         .cardProject {
             background-color: var(--muted);
             border-radius: 16px;
@@ -96,15 +98,16 @@
             max-width: 500px;
             text-align: justify;
         }
-        .cardProject img{
-            border-radius:  20px;        
-            height: 0px;
-            object-fit: cover;    
-            transition: 0.3s ease-in-out;
+
+        .cardProject img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: .5rem;
+
         }
-        .cardProject:hover img{
-            height: 200px;
-        }
+
         .techs {
             display: flex;
             justify-content: flex-end;
@@ -152,10 +155,20 @@
         .wrapper {
             display: flex;
             flex-direction: column;
-            max-width: 900px;
+            max-width: 1800px;
             width: 100%;
+        }
 
-            margin: auto;
+        .gridProjects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 1rem;
+        }
+
+        @media (max-width: 500px) {
+            .gridProjects {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+            }
         }
 
         @media (max-width: 630px) {
