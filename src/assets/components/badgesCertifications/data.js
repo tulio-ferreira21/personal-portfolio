@@ -1,13 +1,13 @@
-import cloudPratictioner from "/public/imgs-achievements/aws-certified-cloud-practitioner.png";
-import graduateReStart from "/public/imgs-achievements/aws-re-start-graduate.png";
-import awsGeneralDay from "/public/imgs-achievements/aws-general-immersion-day-participant.png";
-import gitGithubIf from "/public/imgs-achievements/github-init-pr.png";
-import kodieNodeJs from "/public/imgs-achievements/kodie-nodejs.png";
-import jornadaRepe from "/public/imgs-achievements/34.png";
-import gitGithubMoviplu from "/public/imgs-achievements/gitegithub_moviplu.png";
-import htmlMoviplu from "/public/imgs-achievements/html_moviplu.png";
-import cssMoviplu from "/public/imgs-achievements/css_moviplu.png";
-import bootstrapMoviplu from "/public/imgs-achievements/bootstrap_moviplu.png"
+import cloudPratictioner from "../../files/imgs-achievements/aws-certified-cloud-practitioner.png";
+import graduateReStart from "../../files/imgs-achievements/aws-re-start-graduate.png";
+import awsGeneralDay from "../../files/imgs-achievements/aws-general-immersion-day-participant.png";
+import gitGithubIf from "../../files/imgs-achievements/github-init-pr.png";
+import kodieNodeJs from "../../files/imgs-achievements/kodie-nodejs.png";
+import jornadaRepe from "../../files/imgs-achievements/34.png";
+import gitGithubMoviplu from "../../files/imgs-achievements/gitegithub_moviplu.png";
+import htmlMoviplu from "../../files/imgs-achievements/html_moviplu.png";
+import cssMoviplu from "../../files/imgs-achievements/css_moviplu.png";
+import bootstrapMoviplu from "../../files/imgs-achievements/bootstrap_moviplu.png"
 export const badges = [
   {
     title: "AWS Cloud Practitioner",

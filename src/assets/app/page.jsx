@@ -10,7 +10,7 @@ import Projects from "../components/projects/projects";
 import TechStack from "../components/techStack/techStack";
 import MatrixRainComponent from "../components/ui/MatrixRain";
 import Loading from "../components/ui/loading/Loading";
-import Education from "../components/education/Education";
+import Education from "../components/education/education";
 
 import styles from "./page.module.css";
 

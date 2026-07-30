@@ -1,11 +1,11 @@
-import catalogo from "../../../../public/imgs-projects/b&b.png";
-import pokemonSearch from "../../../../public/imgs-projects/pokemon-search.png";
-import birthdayOrg from "../../../../public/imgs-projects/birthday-oganization.png";
-import worldCountries from "../../../../public/imgs-projects/world-countries.png";
-import gateboard from "../../../../public/imgs-projects/gateboard.png";
-import portfolio from "../../../../public/imgs-projects/portfolio.png";
-import football from "../../../../public/imgs-projects/football.png";
-import gamevault from "../../../../public/imgs-projects/gamevault.png";
+import catalogo from "../../files/imgs-projects/b&b.png";
+import pokemonSearch from "../../files/imgs-projects/pokemon-search.png";
+import birthdayOrg from "../../files/imgs-projects/birthday-oganization.png";
+import worldCountries from "../../files/imgs-projects/world-countries.png";
+import gateboard from "../../files/imgs-projects/gateboard.png";
+import portfolio from "../../files/imgs-projects/portfolio.png";
+import football from "../../files/imgs-projects/football.png";
+import gamevault from "../../files/imgs-projects/gamevault.png";
 export const allProjects = [
   {
     img: catalogo,

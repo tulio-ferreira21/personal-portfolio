@@ -1,6 +1,6 @@
-import ifpe from "/public/img-education/if_logo.webp";
-import ufape from "/public/img-education/ufape_logo.png";
-import escolaDaNuvem from "/public/img-education/escola_da_nuvem_logo.jpg";
+import ifpe from "../../files/img-education/if_logo.webp";
+import ufape from "../../files/img-education/ufape_logo.png";
+import escolaDaNuvem from "../../files/img-education/escola_da_nuvem_logo.jpg";
 export const education = [
   {
     title: "Técnico em Informática para Internet | Ensino Médio",
