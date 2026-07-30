@@ -1,193 +1,233 @@
-        .container {
-            margin-top: .8rem;
-            padding: .8rem;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
+.container {
+  margin-top: 0.8rem;
+  padding: 0.8rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 
-            border-bottom: 1px solid var(--muted);
-            min-height: 100vh;
+  border-bottom: 1px solid var(--muted);
+  min-height: 100vh;
 
-            overflow-x: none;
-        }
+  overflow-x: none;
+}
 
-        .container main {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
+.container main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 
-        .containerHeader {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            font-family: var(--font-jetbrains-mono);
-        }
+.containerHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-jetbrains-mono);
+}
 
-        .containerHeader .num {
-            color: var(--accent);
-        }
+.containerHeader .num {
+  color: var(--accent);
+}
 
-        .containerHeader h4 {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: #fff;
-        }
+.containerHeader h4 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #fff;
+}
 
-        .containerHeader h4::after {
-            content: " ";
-            flex: 1;
-            border-bottom: 1px solid var(--muted-foreground);
-        }
+.containerHeader h4::after {
+  content: " ";
+  flex: 1;
+  border-bottom: 1px solid var(--muted-foreground);
+}
 
-        .containerHeader h4 span {
-            color: var(--accent);
-            text-shadow: 0px 0px 16px var(--primary);
-        }
+.containerHeader h4 span {
+  color: var(--accent);
+  text-shadow: 0px 0px 16px var(--primary);
+}
 
-        .projects {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
-        .projects aside span {
-            color: var(--accent);
-            text-shadow: 0px 0px 10px var(--accent);
-        }
+.projects aside span {
+  color: var(--accent);
+  text-shadow: 0px 0px 10px var(--accent);
+}
 
-        .projects aside {
-            font-family: var(--font-jetbrains-mono);
-            color: var(--muted-foreground);
-        }
+.projects aside {
+  font-family: var(--font-jetbrains-mono);
+  color: var(--muted-foreground);
+}
 
-        .projects strong {
-            font-family: var(--font-space-grotesk);
-            color: var(--muted-foreground);
-        }
+.projects strong {
+  font-family: var(--font-space-grotesk);
+  color: var(--muted-foreground);
+}
 
-        .cardProject {
-            background-color: var(--muted);
-            border-radius: 16px;
-            padding: 1.2rem;
-            display: flex;
-            flex-direction: column;
-            gap: .6rem;
-            font-family: var(--font-space-grotesk);
-            box-shadow: 0px 0px 10px var(--card-foreground);
+.cardProject {
+  background-color: var(--muted);
+  border-radius: 16px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-family: var(--font-space-grotesk);
+  box-shadow: 0px 0px 10px var(--card-foreground);
 
-            transition: 0.3s;
-        }
+  transition: 0.3s;
+}
 
-        .cardProject header {
-            display: flex;
-            justify-content: space-between;
-        }
+.cardProject header {
+  display: flex;
+  justify-content: space-between;
+}
 
-        .cardProject header h3 {
-            font-size: 1.5rem;
-            font-weight: 900;
-            color: var(--primary);
+.cardProject header h3 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--primary);
+}
 
-        }
+.cardProject p {
+  color: var(--muted-foreground);
+  font-size: 1rem;
+  transition: 0.5s;
+  max-width: 500px;
+  text-align: justify;
+}
 
-        .cardProject p {
-            color: var(--muted-foreground);
-            font-size: 1rem;
-            transition: 0.5s;
-            max-width: 500px;
-            text-align: justify;
-        }
+.cardProject img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+}
 
-        .cardProject img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 12px;
-            margin-bottom: .5rem;
+.techs {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
 
-        }
+.tech {
+  background-color: var(--card-foreground);
+  padding: 0.5rem;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: var(--primary);
+}
 
-        .techs {
-            display: flex;
-            justify-content: flex-end;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
+.tech:hover {
+  transform: scale(1.02);
+}
 
-        .tech {
-            background-color: var(--card-foreground);
-            padding: .5rem;
-            border-radius: 16px;
-            font-size: .8rem;
-            cursor: pointer;
-            transition: 0.3s ease;
-            color: var(--primary);
-        }
+.cardProject:hover {
+  transform: scale(1.02);
+}
 
-        .tech:hover {
-            transform: scale(1.02);
-        }
+.links {
+  display: flex;
+  gap: 0.6rem;
+}
 
-        .cardProject:hover {
-            transform: scale(1.02);
-        }
+.links a {
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  color: var(--muted-foreground);
+}
 
-        .links {
-            display: flex;
-            gap: .6rem;
-        }
+.links a:hover {
+  color: var(--accent);
+}
 
-        .links a {
-            transition: 0.3s ease-in-out;
-            cursor: pointer;
-            color: var(--muted-foreground);
-        }
+.links a:active {
+  transform: scale(1.2);
+}
 
-        .links a:hover {
-            color: var(--accent);
-        }
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1800px;
+  width: 100%;
+}
 
-        .links a:active {
-            transform: scale(1.2);
-        }
+.gridProjects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1rem;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
 
-        .wrapper {
-            display: flex;
-            flex-direction: column;
-            max-width: 1800px;
-            width: 100%;
-        }
+.showMoreButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
 
-        .gridProjects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 1rem;
-        }
+  padding: 0.9rem 1.4rem;
 
-        @media (max-width: 500px) {
-            .gridProjects {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
-            }
-        }
+  border: 1px solid var(--primary);
+  border-radius: 12px;
 
-        @media (max-width: 630px) {
-            .techs {
-                justify-content: flex-start;
-            }
-        }
+  background: rgba(0, 255, 120, 0.08);
+  color: var(--primary);
 
-        @media (max-width: 480px) {
+  font-family: var(--font-jetbrains-mono);
+  font-size: 0.95rem;
+  font-weight: 600;
 
-            .containerHeader h4 {
-                font-size: 2rem;
-            }
+  cursor: pointer;
 
-            .cardProject header h3 {
-                font-size: 1rem;
-            }
+  transition: all 0.25s ease;
+}
 
-            .cardProject p {
-                font-size: .8rem;
-            }
-        }
+.showMoreButton svg {
+  transition: transform 0.25s ease;
+}
+
+.showMoreButton:hover {
+  background: var(--primary);
+  color: #000;
+
+  box-shadow: 0 0 20px var(--glow-green);
+
+  transform: translateY(-2px);
+}
+
+.showMoreButton:hover svg {
+  transform: translateY(2px);
+}
+@media (max-width: 500px) {
+  .gridProjects {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 630px) {
+  .techs {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .containerHeader h4 {
+    font-size: 2rem;
+  }
+
+  .cardProject header h3 {
+    font-size: 1rem;
+  }
+
+  .cardProject p {
+    font-size: 0.8rem;
+  }
+}

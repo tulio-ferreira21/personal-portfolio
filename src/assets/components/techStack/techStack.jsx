@@ -1,148 +1,80 @@
-import styles from './techStack.module.css'
-import {
-    SiHtml5,
-    SiCss3,
-    SiReact,
-    SiBootstrap,
-    SiSass,
-    SiTypescript,
-    SiJavascript,
-    SiGit,
-    SiGithub,
-    SiSupabase,
-    SiNotion,
-    SiSqlite,
-    SiTailwindcss
-} from 'react-icons/si'
-
-import { VscVscode } from 'react-icons/vsc'
-import ProgressBar from '../ui/progressBar/progressBar'
+import { useState } from "react";
+import styles from "./techStack.module.css";
+import { techs, files } from "./data";
 export default function TechStack() {
-    const techs = [
-        { name: 'HTML5', Icon: SiHtml5, type: 'langMark' },
-        { name: 'CSS3', Icon: SiCss3, type: 'langMark' },
-        { name: 'JavaScript', Icon: SiJavascript, type: 'lang' },
-        { name: 'TypeScript', Icon: SiTypescript, type: 'lang' },
-        { name: 'SQL', Icon: SiSqlite, type: 'lang' },
+  const [activeFile, setActiveFile] = useState("Language");
+  const currentTechs = techs.filter((tech) => tech.type === activeFile);
 
-        { name: 'React', Icon: SiReact, type: 'framework' },
-        { name: 'Bootstrap', Icon: SiBootstrap, type: 'framework' },
-        { name: 'Sass', Icon: SiSass, type: 'framework' },
-        { name: 'TailwindCSS', Icon: SiTailwindcss, type: 'framework' },
+  return (
+    <div className={styles.container} id="stacks">
+      <main>
+        <header className={styles.containerHeader}>
+          <span className={styles.num}>//03</span>
 
-        { name: 'Git', Icon: SiGit, type: 'tool' },
-        { name: 'GitHub', Icon: SiGithub, type: 'tool' },
-        { name: 'Supabase', Icon: SiSupabase, type: 'tool' },
-        { name: 'VS Code', Icon: VscVscode, type: 'tool' },
-        { name: 'Notion', Icon: SiNotion, type: 'tool' },
-    ]
+          <h4>
+            Tech <span>Stack</span>
+          </h4>
+        </header>
 
-    const techsTools = techs.filter(tech => tech.type === 'tool')
-    const techsFramLib = techs.filter(tech => tech.type === 'framework')
-    const techsLang = techs.filter(tech => tech.type === 'lang' || tech.type === 'langMark')
-
-    return (
-
-        <>
-            <div className={styles.container} id='stacks'>
-                <main>
-                    <header className={styles.containerHeader}>
-                        <span className={styles.num}>
-                        //02
-                        </span>
-                        <h4>
-                            Tech <span>Stack</span>
-                        </h4>
-                    </header>
-                    <section className={styles.content}>
-                        <div className={styles.terminal}>
-                            <div className={styles.terminalHeader}>
-                                <div className={styles.dotRed}></div>
-                                <div className={styles.dotYellow}></div>
-                                <div className={styles.dotGreen}></div>
-                                <em>languages.bash</em>
-                            </div>
-                            <div className={styles.contentTerminal}>
-                                <span>$ ~/user: </span>  <b>cd</b> stacks/langs <br />
-                                <span>$ ~/user/stacks/langs: </span> <b>ls -s</b> <br />
-                                <br />
-                                ------ langs :
-                                <section className={styles.gridStacks}>
-                                    {techsLang.map((tech, index) => (
-                                        <>
-                                            <div key={index} className={styles.cardTech}>
-                                                <figure>
-                                                    <tech.Icon size={50} color='hsl(120 100% 50%)' />
-                                                </figure>
-                                                <p>{tech.name}</p>
-                                            </div>
-                                        </>
-                                    ))}
-                                </section>
-                                <ProgressBar level={75} />
-
-                            </div>
-                        </div>
-
-                        <div className={styles.terminal}>
-                            <div className={styles.terminalHeader}>
-                                <div className={styles.dotRed}></div>
-                                <div className={styles.dotYellow}></div>
-                                <div className={styles.dotGreen}></div>
-                                <em>frameworks.bash</em>
-                            </div>
-                            <div className={styles.contentTerminal}>
-                                <span>$ ~/user:</span>  <b>cd</b> stacks/langs/frameworks <br />
-                                <span>$ ~/user/stacks/langs/frameworks:</span> <b>ls -s</b> <br />
-                                <br />
-                                ------ frameworks and libs   :
-                                <section className={styles.gridStacks}>
-                                    {techsFramLib.map((tech, index) => (
-                                        <>
-                                            <div key={index} className={styles.cardTech}>
-                                                <figure>
-                                                    <tech.Icon size={55} color='hsl(120 100% 50%)' />
-                                                </figure>
-                                                <p>{tech.name}</p>
-                                            </div>
-                                        </>
-                                    ))}
-                                </section>
-                                <ProgressBar level={50} />
-                            </div>
-                        </div>
-
-                        <div className={styles.terminal}>
-                            <div className={styles.terminalHeader}>
-                                <div className={styles.dotRed}></div>
-                                <div className={styles.dotYellow}></div>
-                                <div className={styles.dotGreen}></div>
-                                <em>tools.bash</em>
-                            </div>
-                            <div className={styles.contentTerminal}>
-                                <span>$ ~/user: </span>  <b>cd</b> stacks/tools <br />
-                                <span>$ ~/user/stacks/tools: </span> <b>ls -s</b> <br />
-                                <br />
-                                ------ tools :
-                                <section className={styles.gridStacks}>
-                                    {techsTools.map((tech, index) => (
-                                        <>
-                                            <div key={index} className={styles.cardTech}>
-                                                <figure>
-                                                    <tech.Icon size={50} color='hsl(120 100% 50%)' />
-                                                </figure>
-                                                <p>{tech.name}</p>
-                                            </div>
-                                        </>
-                                    ))}
-                                </section>
-                                <ProgressBar level={60} />
-                            </div>
-                        </div>
-                    </section>
-                </main>
+        <section className={styles.ide}>
+          <header className={styles.ideHeader}>
+            <div className={styles.windowButtons}>
+              <span className={styles.red}></span>
+              <span className={styles.yellow}></span>
+              <span className={styles.green}></span>
             </div>
-        </>
 
-    )
+            <div className={styles.windowTitle}>portfolio.code-workspace</div>
+          </header>
+          <div className={styles.ideBody}>
+            <aside className={styles.sidebar}>
+              <div className={styles.sidebarTitle}>Explorer</div>
+
+              {files.map((file) => {
+                const Icon = file.icon;
+
+                return (
+                  <button
+                    key={file.name}
+                    onClick={() => setActiveFile(file.type)}
+                    className={`${styles.fileButton} ${
+                      activeFile === file.type ? styles.active : ""
+                    }`}
+                  >
+                    <Icon size={18} />
+
+                    <span>{file.name}</span>
+                  </button>
+                );
+              })}
+            </aside>
+            <section className={styles.editor}>
+              <div className={styles.editorTab}>
+                {activeFile.toLowerCase()}.ts
+              </div>
+
+              <div className={styles.codeArea}>
+                <span className={styles.comment}>// {activeFile} Stack</span>
+                <br />
+                <br />
+                <span className={styles.keyword}>export const</span>{" "}
+                <span className={styles.variable}>stack</span> <b>= [</b>
+                <div className={styles.gridStacks}>
+                  {currentTechs.map((tech) => (
+                    <div key={tech.name} className={styles.cardTech}>
+                      <tech.Icon size={48} />
+
+                      <p>{tech.name}</p>
+                    </div>
+                  ))}
+                </div>
+                <br />
+                <b>]</b>
+              </div>
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
 }

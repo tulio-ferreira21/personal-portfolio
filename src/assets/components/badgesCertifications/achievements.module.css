@@ -1,0 +1,544 @@
+@import "../css/variables.css";
+
+* {
+  font-family: var(--font-jetbrains-mono);
+}
+.container {
+  margin-top: 0.8rem;
+  padding: 0.8rem;
+  border-bottom: 1px solid var(--muted);
+}
+
+.container main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.containerHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-jetbrains-mono);
+}
+
+.num {
+  color: var(--accent);
+}
+
+.containerHeader h4 {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: 900;
+}
+
+.containerHeader h4 span {
+  color: var(--accent);
+  text-shadow: 0 0 12px var(--accent);
+}
+
+.ide {
+  background: var(--card);
+  border: 1px solid var(--muted);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
+}
+
+.ideHeader {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  background: var(--muted);
+  border-bottom: 1px solid var(--muted-foreground);
+}
+
+.windowButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.red,
+.yellow,
+.green {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.red {
+  background: #ff5f56;
+}
+
+.yellow {
+  background: #ffbd2e;
+}
+
+.green {
+  background: #27c93f;
+}
+
+.windowTitle {
+  color: var(--muted-foreground);
+  font-size: 0.85rem;
+  font-family: var(--font-jetbrains-mono);
+}
+
+.ideBody {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  min-height: 600px;
+}
+
+.sidebar {
+  background: #181818;
+  border-right: 1px solid var(--muted);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebarTitle {
+  color: var(--accent);
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.folder {
+  color: white;
+  margin-bottom: 0.8rem;
+  padding-left: 0.3rem;
+  font-weight: 600;
+}
+
+.fileButton {
+  border: none;
+  background: transparent;
+  color: var(--muted-foreground);
+
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  text-align: left;
+
+  padding: 0.75rem;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+
+  font-family: var(--font-jetbrains-mono);
+}
+
+.fileButton:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+.active {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--accent);
+}
+
+.editor {
+  display: flex;
+  flex-direction: column;
+  background: #101010;
+}
+
+.editorTab {
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 1rem;
+
+  background: #1a1a1a;
+
+  border-bottom: 1px solid var(--muted);
+
+  color: white;
+
+  font-family: var(--font-jetbrains-mono);
+}
+
+.codeArea {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  font-family: var(--font-jetbrains-mono);
+}
+
+.comment {
+  color: #6a9955;
+}
+
+.keyword {
+  color: #569cd6;
+}
+
+.variable {
+  color: #4ec9b0;
+}
+.cards {
+  margin-top: 2rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  gap: 1.5rem;
+}
+
+.card {
+  display: flex;
+  gap: 1rem;
+
+  background: #181818;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 12px;
+
+  padding: 1rem;
+
+  transition: 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(0, 255, 120, 0.15);
+}
+
+.cardImage {
+  flex-shrink: 0;
+}
+
+.cardImage img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+.placeholder {
+  width: 90px;
+  height: 90px;
+
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  font-size: 2.5rem;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.cardContent h3 {
+  color: white;
+  font-size: 1.1rem;
+}
+
+.cardContent p {
+  color: var(--muted-foreground);
+  width: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.cardContent small {
+  color: #888;
+}
+
+.cardContent a {
+  margin-top: auto;
+
+  color: var(--accent);
+
+  text-decoration: none;
+
+  transition: 0.25s;
+}
+
+.cardContent a:hover {
+  text-decoration: underline;
+}
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+
+  padding: 2rem;
+
+  z-index: 999999;
+}
+.modal {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  overflow-y: auto;
+  background: var(--card);
+  border: 1px solid var(--muted);
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  animation: modalOpen 0.25s ease;
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.modalImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalImage img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 16px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1rem;
+}
+
+.modalInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modalTag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+
+  padding: 0.35rem 0.8rem;
+
+  border-radius: 999px;
+
+  background: rgba(0, 255, 120, 0.15);
+
+  color: var(--accent);
+
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.modalInfo h2 {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.modalInfo h4 {
+  color: var(--muted-foreground);
+  font-weight: 500;
+}
+
+.modalMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  color: #bcbcbc;
+
+  font-size: 0.95rem;
+}
+
+.modalInfo p {
+  color: #ddd;
+
+  line-height: 1.7;
+
+  text-align: justify;
+}
+
+.modalButton {
+  margin-top: auto;
+  width: fit-content;
+  text-decoration: none;
+  padding: 0.85rem 1.3rem;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #000;
+  font-weight: 700;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.modalButton:hover {
+  transform: translateY(-2px);
+}
+
+.closeButton {
+  position: absolute;
+
+  top: 18px;
+  right: 18px;
+
+  width: 40px;
+  height: 40px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: #fff;
+
+  font-size: 1rem;
+
+  transition: 0.25s;
+}
+
+.closeButton:hover {
+  background: var(--accent);
+  color: #000;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.showMoreButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  padding: 0.9rem 1.4rem;
+
+  border: 1px solid var(--primary);
+  border-radius: 12px;
+
+  background: rgba(0, 255, 120, 0.08);
+  color: var(--primary);
+
+  font-family: var(--font-jetbrains-mono);
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.showMoreButton svg {
+  transition: transform 0.25s ease;
+}
+
+.showMoreButton:hover {
+  background: var(--primary);
+  color: #000;
+
+  box-shadow: 0 0 20px var(--glow-green);
+
+  transform: translateY(-2px);
+}
+
+.showMoreButton:hover svg {
+  transform: translateY(2px);
+}
+@keyframes modalOpen {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .modalContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .modalImage img {
+    max-width: 220px;
+  }
+  .modalTag {
+    margin: auto;
+  }
+  .modalMeta {
+    justify-content: center;
+  }
+  .modalButton {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+@media (max-width: 900px) {
+  .ideBody {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--muted);
+  }
+}
+
+@media (max-width: 650px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .codeArea {
+    padding: 1rem;
+  }
+
+  .containerHeader h4 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cardContent {
+    align-items: center;
+  }
+}

@@ -1,0 +1,186 @@
+@import "../../css/variables.css";
+
+.container {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #050505;
+}
+
+
+.terminal {
+    width: min(420px, 90%);
+
+    background: var(--card);
+
+    border: 1px solid var(--muted);
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 0 30px rgba(0, 255, 120, 0.15);
+}
+
+
+.header {
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+
+    gap: .5rem;
+
+    padding: 0 1rem;
+
+    background: rgba(255,255,255,.05);
+
+    border-bottom: 1px solid var(--muted);
+}
+
+
+.red,
+.yellow,
+.green {
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+}
+
+
+.red {
+    background: #ff5f56;
+}
+
+.yellow {
+    background: #ffbd2e;
+}
+
+.green {
+    background: #27c93f;
+}
+
+
+.content {
+    padding: 2rem;
+
+    font-family: var(--font-jetbrains-mono);
+
+    color: var(--muted-foreground);
+}
+
+
+.content p {
+    margin: 0;
+
+    font-size: .9rem;
+}
+
+
+.content p span {
+    color: var(--primary);
+
+    text-shadow:
+        0 0 15px var(--glow-green);
+}
+
+
+.loader {
+    height: 8px;
+
+    margin: 1.5rem 0;
+
+    background: rgba(255,255,255,.08);
+
+    border-radius: 999px;
+
+    overflow: hidden;
+}
+
+
+.bar {
+    height: 100%;
+
+    width: 40%;
+
+    background: var(--primary);
+
+    border-radius: inherit;
+
+    box-shadow:
+        0 0 15px var(--glow-green);
+
+    animation: loading 1.5s infinite ease-in-out;
+}
+
+
+.status {
+    display: flex;
+
+    align-items: center;
+
+    gap: .2rem;
+}
+
+
+.dots {
+    display: inline-flex;
+}
+
+
+.dots i {
+    font-style: normal;
+
+    animation: dots 1.4s infinite;
+
+    color: var(--primary);
+}
+
+
+.dots i:nth-child(2) {
+    animation-delay: .2s;
+}
+
+
+.dots i:nth-child(3) {
+    animation-delay: .4s;
+}
+
+
+@keyframes loading {
+
+    0% {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        transform: translateX(150%);
+    }
+
+    100% {
+        transform: translateX(250%);
+    }
+
+}
+
+
+@keyframes dots {
+
+    0%, 20% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
