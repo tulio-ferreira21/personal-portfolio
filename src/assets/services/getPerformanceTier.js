@@ -5,7 +5,7 @@ export function getFps(duration = 2000) {
     frames++;
     if (now - start >= duration) {
       const fps = Math.round((frames * 1000) / duration);
-      if (fps < 40) {
+      if (fps < 35) {
         document.body.classList.add("no-animation");
       }
       return; 

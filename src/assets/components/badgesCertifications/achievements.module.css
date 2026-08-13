@@ -175,7 +175,9 @@
   overflow-y: auto;
   font-family: var(--font-jetbrains-mono);
 }
-
+.codeArea b {
+  color: white;
+}
 .comment {
   color: #6a9955;
 }

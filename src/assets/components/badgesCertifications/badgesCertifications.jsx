@@ -119,7 +119,11 @@ export default function Achievements() {
                       >
                         <div className={styles.cardImage}>
                           {item.image ? (
-                            <img src={item.image} alt={item.title} />
+                            <img
+                              src={item.image}
+                              alt={item.title}
+                              title="Imagem do certificado"
+                            />
                           ) : (
                             <div className={styles.placeholder}>🏅</div>
                           )}
@@ -200,6 +204,7 @@ export default function Achievements() {
                     <img
                       src={selectedAchievement.image}
                       alt={selectedAchievement.title}
+                      title={`Imagem do certificado: ${selectedAchievement.title}`}
                     />
                   </div>
 

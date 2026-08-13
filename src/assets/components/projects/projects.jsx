@@ -27,7 +27,11 @@ export default function Projects() {
               <div className={styles.gridProjects}>
                 {allProjects.slice(0, projectsVisible).map((project, index) => (
                   <div key={index} className={styles.cardProject}>
-                    <img src={project.img} />
+                    <img
+                      src={project.img}
+                      alt={`Imagem do projeto ${project.name}`}
+                      title={`Imagem do projeto ${project.name}`}
+                    />
                     <header>
                       <h3>{project.name}</h3>
                       <div className={styles.links}>

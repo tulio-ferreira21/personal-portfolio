@@ -72,7 +72,7 @@ export default function Hero() {
           <div className={styles.glow}></div>
 
           <div className={styles.imageWrapper}>
-            <img src="/foto-tulio.png" alt="Túlio Diego" />
+            <img src="/foto-tulio.png" alt="Túlio Diego" title="Imagem do proprietário: Túlio Diego" />
           </div>
 
           <div className={`${styles.techBadge} ${styles.react}`}>

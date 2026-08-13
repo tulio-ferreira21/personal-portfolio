@@ -75,7 +75,7 @@ export default function Education() {
                   {education.map((item) => (
                     <article className={styles.educationCard} key={item.title}>
                       <div className={styles.icon}>
-                        <img src={item.image} alt={item.institution} />
+                        <img src={item.image} alt={item.institution} title={`Logo do(a) ${item.institution}`} />
                       </div>
 
                       <div className={styles.content}>

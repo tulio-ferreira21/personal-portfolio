@@ -11,15 +11,15 @@ export const education = [
     description:
       "Formação técnica com foco em desenvolvimento web, programação, banco de dados, redes de computadores, manutenção de computadores e desenvolvimento de aplicações responsivas.",
   },
-  {
-    title: "Bacharelado em Ciência da Computação",
-    institution: "Universidade Federal do Agreste de Pernambuco (UFAPE)",
-    period: "Out/2026 - Atual",
-    status: "Em andamento",
-    image: ufape,
-    description:
-      "Graduação voltada ao estudo de algoritmos, estruturas de dados, engenharia de software, banco de dados, inteligência artificial, computação em nuvem e desenvolvimento de sistemas.",
-  },
+  // {
+  //   title: "Bacharelado em Ciência da Computação",
+  //   institution: "Universidade Federal do Agreste de Pernambuco (UFAPE)",
+  //   period: "Out/2026 - Atual",
+  //   status: "Em andamento",
+  //   image: ufape,
+  //   description:
+  //     "Graduação voltada ao estudo de algoritmos, estruturas de dados, engenharia de software, banco de dados, inteligência artificial, computação em nuvem e desenvolvimento de sistemas.",
+  // },
   {
     title: "AWS re/Start Program",
     institution: "Escola da Nuvem",
