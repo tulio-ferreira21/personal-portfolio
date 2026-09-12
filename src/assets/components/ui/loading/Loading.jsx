@@ -1,6 +1,8 @@
 import styles from "./loading.module.css";
+import { useTranslation } from "react-i18next";
 
 export default function Loading() {
+  const { t } = useTranslation();
   return (
     <div className={styles.container}>
       <div className={styles.terminal}>
@@ -12,7 +14,7 @@ export default function Loading() {
 
         <div className={styles.content}>
           <p>
-            <span>$</span> initializing_td_server...
+            <span>$</span> {t("loading.initializing")}
           </p>
 
           <div className={styles.loader}>
@@ -20,7 +22,7 @@ export default function Loading() {
           </div>
 
           <p className={styles.status}>
-            Loading components
+            {t("loading.components")}
             <span className={styles.dots}>
               <i>.</i>
               <i>.</i>

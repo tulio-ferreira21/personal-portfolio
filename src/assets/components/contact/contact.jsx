@@ -5,20 +5,22 @@ import { TfiEmail } from "react-icons/tfi";
 import styles from "./contact.module.css";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
+import { useTranslation } from "react-i18next";
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [disabled, setDisabled] = useState(false);
+  const { t } = useTranslation();
 
   function handleSubmit(e) {
     e.preventDefault();
     if (!name || !email || !message) {
-      toast.error("Informe todos os campos");
+      toast.error(t("contact.allFields"));
       return;
     }
     if (!email.endsWith("@gmail.com")) {
-      toast.warning("Email inválido");
+      toast.warning(t("contact.invalidEmail"));
     }
     setDisabled(true);
     emailjs
@@ -33,14 +35,14 @@ export default function Contact() {
         "J3dQYKp8aqxXJXwMi",
       )
       .then(() => {
-        toast.success("Mensagem enviada");
+        toast.success(t("contact.sent"));
         setName("");
         setEmail("");
         setMessage("");
         setDisabled(false);
       })
       .catch(() => {
-        toast.error("Erro no envio");
+        toast.error(t("contact.error"));
         setDisabled(false);
       });
   }
@@ -51,16 +53,14 @@ export default function Contact() {
           <header className={styles.containerHeader}>
             <span className={styles.num}>//06</span>
             <h4>
-              Vamos <span>Conversar</span>:
+              {t("contact.title")} <span>{t("contact.highlight")}</span>:
             </h4>
           </header>
         </main>
         <div className={styles.content}>
           <div className={styles.cta}>
             <p>
-              Estou sempre aberto a novas oportunidades, projetos interessantes
-              e conversas sobre tecnologia. Se voce tem uma ideia ou quer
-              trabalhar junto, vamos conectar.
+              {t("contact.description")}
             </p>
             <div className={styles.terminal}>
               <div className={styles.terminalHeader}>
@@ -96,7 +96,7 @@ export default function Contact() {
                       <TfiEmail size={20} /> Email:{" "}
                     </b>
                     <a
-                      href="mailto:tuliodiegodev@gmail.com?subject=Contato pelo Portffólio"
+                      href={`mailto:tuliodiegodev@gmail.com?subject=${encodeURIComponent(t("contact.subject"))}`}
                       target="_blank"
                     >
                       <span>'tuliodiegodev@gmail.com'</span>
@@ -118,36 +118,36 @@ export default function Contact() {
               <div className={styles.contentTerminal}>
                 <div className={styles.inputTerminal}>
                   <sub>
-                    <span>const</span> nome =
+                    <span>const</span> {t("contact.nameVariable")} =
                   </sub>
                   <input
                     type="text"
                     value={name}
-                    placeholder="Nome"
+                    placeholder={t("contact.name")}
                     onChange={(e) => setName(e.target.value)}
                     required
                   />
                 </div>
                 <div className={styles.inputTerminal}>
                   <sub>
-                    <span>const</span> email =
+                    <span>const</span> {t("contact.emailVariable")} =
                   </sub>
                   <input
                     type="email"
                     value={email}
-                    placeholder="Endereço de email"
+                    placeholder={t("contact.email")}
                     onChange={(e) => setEmail(e.target.value)}
                     required
                   />
                 </div>
                 <div className={styles.inputTerminal}>
                   <sub>
-                    <span>const</span> mensagem =
+                    <span>const</span> {t("contact.messageVariable")} =
                   </sub>
                   <textarea
                     type="text"
                     value={message}
-                    placeholder="Mensagem..."
+                    placeholder={t("contact.message")}
                     onChange={(e) => setMessage(e.target.value)}
                   />
                 </div>
@@ -160,7 +160,7 @@ export default function Contact() {
                     }}
                   >
                     <FaPaperPlane size={20} />
-                    {disabled ? "enviando( )..." : " enviar_mensagem()"}
+                    {disabled ? t("contact.sending") : t("contact.send")}
                   </button>
                 </div>
               </div>

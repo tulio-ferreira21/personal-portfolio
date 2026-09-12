@@ -7,9 +7,11 @@ import ConfirmDialog from "../ui/confirmDialog/confirmDialog";
 
 import styles from "./hero.module.css";
 import { SiExpress, SiNestjs } from "react-icons/si";
+import { useTranslation } from "react-i18next";
 
 export default function Hero() {
   const [confirmDialog, setConfirmDialog] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <>
@@ -24,7 +26,7 @@ export default function Hero() {
 
         <div className={styles.content}>
           <h1>
-            Olá, eu sou
+            {t("hero.greeting")}
             <br />
             <span>Túlio Diego</span>
           </h1>
@@ -35,9 +37,7 @@ export default function Hero() {
           </div>
 
           <p>
-            Desenvolvedor Fullstack apaixonado por criar sistemas com interfaces
-            modernas, responsivas e funcionais utilizando React, TypeScript,
-            Express.js, Nest.js e tecnologias de Cloud.
+            {t("hero.description")}
           </p>
 
           <div className={styles.stack}>
@@ -62,17 +62,17 @@ export default function Hero() {
 
           <div className={styles.buttons}>
             <a href="#projects">
-              <button>ver_projetos()</button>
+              <button>{t("hero.viewProjects")}</button>
             </a>
 
-            <button onClick={() => setConfirmDialog(true)}>baixar_cv()</button>
+            <button onClick={() => setConfirmDialog(true)}>{t("hero.downloadCv")}</button>
           </div>
         </div>
         <div className={styles.profile}>
           <div className={styles.glow}></div>
 
           <div className={styles.imageWrapper}>
-            <img src="/foto-tulio.png" alt="Túlio Diego" title="Imagem do proprietário: Túlio Diego" />
+            <img src="/foto-tulio.png" alt={t("hero.imageAlt")} title={t("hero.imageTitle")} />
           </div>
 
           <div className={`${styles.techBadge} ${styles.react}`}>
