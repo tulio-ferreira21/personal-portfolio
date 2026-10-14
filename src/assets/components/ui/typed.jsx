@@ -7,11 +7,14 @@ export default function Typing() {
     useEffect(() => {
         const typed = new Typed(el.current, {
             strings: [
-                "Desenvolvedor Front-End",
+                "Desenvolvedor Full-stack",
                 "React (Vite e CRA)",
                 "HTML e CSS",
                 "Bootstrap e SASS",
                 "JavaScript e TypeScript",
+                "express.js e NestJS",
+                "PostgreSQL",
+                "Computação em nuvem e AWS"
             ],
             typeSpeed: 18,
             backSpeed: 20,
