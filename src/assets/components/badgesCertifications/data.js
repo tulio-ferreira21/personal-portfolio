@@ -8,6 +8,7 @@ import gitGithubMoviplu from "../../files/imgs-achievements/gitegithub_moviplu.p
 import htmlMoviplu from "../../files/imgs-achievements/html_moviplu.png";
 import cssMoviplu from "../../files/imgs-achievements/css_moviplu.png";
 import bootstrapMoviplu from "../../files/imgs-achievements/bootstrap_moviplu.png"
+import ednCertified from "../../files/imgs-achievements/certificado_edn.png"
 export const badges = [
   {
     title: "AWS Cloud Practitioner",
@@ -36,6 +37,13 @@ export const badges = [
 ];
 
 export const certificates = [
+   {
+    title: "Programa AWS re/Start, IA e No Code",
+    issuer: "Escola da Nuvem",
+    workload: "270h",
+    image: ednCertified,
+    credential: "https://www.linkedin.com/feed/update/urn:li:activity:7491984206965841920/"
+  },
   {
     title: "Git e Github: Do Início ao Pull Request",
     issuer: "IFPE, UFRPE & UABJ",

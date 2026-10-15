@@ -1,14 +1,16 @@
 import catalogo from "../../files/imgs-projects/b&b.png";
 import pokemonSearch from "../../files/imgs-projects/pokemon-search.png";
-import birthdayOrg from "../../files/imgs-projects/birthday-oganization.png";
 import worldCountries from "../../files/imgs-projects/world-countries.png";
 import gateboard from "../../files/imgs-projects/gateboard.png";
-import portfolio from "../../files/imgs-projects/portfolio.png";
+// import portfolio from "../../files/imgs-projects/portfolio.png";
 import football from "../../files/imgs-projects/football.png";
 import gamevault from "../../files/imgs-projects/gamevault.png";
 import crochete from "../../files/imgs-projects/crochete.png";
 import trocso from "../../files/imgs-projects/trocso.png";
 import blogTulioDev from "../../files/imgs-projects/blog_tuliodev.png";
+import estuda from "../../files/imgs-projects/estuda.png";
+import festeja from "../../files/imgs-projects/festeja.png";
+import lceki from "../../files/imgs-projects/lceki.png"
 export const allProjects = [
   {
     img: blogTulioDev,
@@ -20,12 +22,20 @@ export const allProjects = [
     techs: ["React", "TypeScript", "Tailwind CSS"],
   },
   {
-    img: crochete,
-    name: "Crochettê",
-    description: "Plataforma de organização de projetos e peças de crochê",
-    href: "https://crochette-gamma.vercel.app/",
-    repo: "https://github.com/tulio-ferreira21/crochete",
-    techs: ["React", "TypeScript", "NestJS", "PrismaORM"],
+    img: estuda,
+    name: "Estuda.",
+    description: "Plataforma de organização e planejamento de estudos.",
+    href: "https://estuda.tuliodiegodev.com.br",
+    repo: null,
+    techs: ["Next", "TypeScript", "TailwindCSS"],
+  },
+  {
+    img: lceki,
+    name: "Lceki Page",
+    description: "Site/portfólio do youtuber de platinas Lceki",
+    href: "https://lceki.vercel.app/",
+    repo: null,
+    techs: ["React, TypeScript, TailwindCSS"]
   },
   {
     img: trocso,
@@ -34,6 +44,14 @@ export const allProjects = [
     href: "https://trocso.vercel.app/",
     repo: "https://github.com/tulio-ferreira21/desafio-moviplu",
     techs: ["HTML", "CSS", "JS", "NestJS", "PrismaORM"],
+  },
+  {
+    img: crochete,
+    name: "Crochettê",
+    description: "Plataforma de organização de projetos e peças de crochê",
+    href: "https://crochette-gamma.vercel.app/",
+    repo: "https://github.com/tulio-ferreira21/crochete",
+    techs: ["React", "TypeScript", "NestJS", "PrismaORM"],
   },
   {
     img: gamevault,
@@ -51,15 +69,14 @@ export const allProjects = [
     href: "https://pokemon-search-sable.vercel.app/",
     repo: "https://github.com/tulio-ferreira21/pokemon-search",
   },
-  // {
-  //   img: birthdayOrg,
-  //   name: "Birthday Organization",
-  //   description:
-  //     "SPA para organização e controle financeiro de eventos com dashboard de gráficos.",
-  //   techs: ["React", "JavaScript", "CSS"],
-  //   href: "https://birthday-organization-ivory.vercel.app",
-  //   repo: "https://github.com/tulio-ferreira21/birthday-organization",
-  // },
+  {
+    img: festeja,
+    name: "Festeja",
+    description: "Plataforma que simplifica a organização de festas.",
+    href: "https://festeja.tuliodiegodev.com.br",
+    repo: null,
+    techs: ["React", "TypeScript", "IndexedDB"],
+  },
   {
     img: worldCountries,
     name: "World Countries",

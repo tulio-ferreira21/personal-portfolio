@@ -1,5 +1,5 @@
 import ifpe from "../../files/img-education/if_logo.webp";
-import ufape from "../../files/img-education/ufape_logo.png";
+// import ufape from "../../files/img-education/ufape_logo.png";
 import escolaDaNuvem from "../../files/img-education/escola_da_nuvem_logo.jpg";
 export const education = [
   {
@@ -25,7 +25,7 @@ export const education = [
     institution: "Escola da Nuvem",
     period: "Fev/2026 - Jul/2026",
     status: "Concluído",
-    workload: "480 horas",
+    workload: "270 horas",
     image: escolaDaNuvem,
     description:
       "Programa intensivo de capacitação em Computação em Nuvem com foco na Amazon Web Services (AWS), abordando Linux, redes, segurança, arquitetura de soluções, bancos de dados, deploy de aplicações e preparação para certificações AWS.",
