@@ -1,8 +1,10 @@
 import { useState } from "react";
 import styles from "./techStack.module.css";
 import { techs, files } from "./data";
+import { useTranslation } from "react-i18next";
 export default function TechStack() {
   const [activeFile, setActiveFile] = useState("Language");
+  const { t } = useTranslation();
   const currentTechs = techs.filter((tech) => tech.type === activeFile);
 
   return (
@@ -12,7 +14,7 @@ export default function TechStack() {
           <span className={styles.num}>//03</span>
 
           <h4>
-            Tech <span>Stack</span>
+            {t("stack.title")} <span>{t("stack.highlight")}</span>
           </h4>
         </header>
 
@@ -28,7 +30,7 @@ export default function TechStack() {
           </header>
           <div className={styles.ideBody}>
             <aside className={styles.sidebar}>
-              <div className={styles.sidebarTitle}>Explorer</div>
+              <div className={styles.sidebarTitle}>{t("stack.explorer")}</div>
 
               {files.map((file) => {
                 const Icon = file.icon;
@@ -54,7 +56,7 @@ export default function TechStack() {
               </div>
 
               <div className={styles.codeArea}>
-                <span className={styles.comment}>// {activeFile} Stack</span>
+                <span className={styles.comment}>// {activeFile} {t("stack.comment")}</span>
                 <br />
                 <br />
                 <span className={styles.keyword}>export const</span>{" "}

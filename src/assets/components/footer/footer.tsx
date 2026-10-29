@@ -1,7 +1,9 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import styles from "./footer.module.css";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { t } = useTranslation();
   return (
     <footer className={styles.footer}>
       <div className={styles.content}>
@@ -11,21 +13,21 @@ export default function Footer() {
           </h3>
 
           <p>
-            Desenvolvedor Fullstack focado no desenvolvimento completo de plataformas e sites modernos
+            {t("footer.description")}
           </p>
         </div>
 
         <div className={styles.links}>
-          <h4>Navegação</h4>
+          <h4>{t("footer.navigation")}</h4>
 
-          <a href="#aboutme">Sobre</a>
-          <a href="#projects">Projetos</a>
-          <a href="#skills">Tecnologias</a>
-          <a href="#contact">Contato</a>
+          <a href="#aboutme">{t("nav.about")}</a>
+          <a href="#projects">{t("nav.projects")}</a>
+          <a href="#stacks">{t("footer.technologies")}</a>
+          <a href="#contact">{t("nav.contact")}</a>
         </div>
 
         <div className={styles.social}>
-          <h4>Conecte-se</h4>
+          <h4>{t("footer.connect")}</h4>
 
           <div>
             <a href="https://github.com/tulio-ferreira21" target="_blank">
@@ -41,8 +43,7 @@ export default function Footer() {
 
       <div className={styles.bottom}>
         <span>
-          © Túlio Diego. {new Date().getFullYear()}. Todos os direitos
-          reservados
+          © Túlio Diego. {new Date().getFullYear()}. {t("footer.rights")}
         </span>
       </div>
     </footer>

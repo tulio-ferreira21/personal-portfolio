@@ -1,5 +1,5 @@
 import ifpe from "../../files/img-education/if_logo.webp";
-import ufape from "../../files/img-education/ufape_logo.png";
+// import ufape from "../../files/img-education/ufape_logo.png";
 import escolaDaNuvem from "../../files/img-education/escola_da_nuvem_logo.jpg";
 export const education = [
   {

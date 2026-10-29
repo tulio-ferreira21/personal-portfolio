@@ -5,9 +5,12 @@ import styles from "./education.module.css";
 import { BiFile, BiBook, BiTime, BiCheckCircle } from "react-icons/bi";
 
 import { education } from "./data";
+import { useTranslation } from "react-i18next";
 
 export default function Education() {
   const [activeFile] = useState("education");
+  const { t } = useTranslation();
+  const translatedItems = t("education.items", { returnObjects: true });
 
   const files = [
     {
@@ -23,7 +26,7 @@ export default function Education() {
           <span className={styles.num}>//02 </span>
 
           <h4>
-            Educa<span>tion</span>
+            {t("education.title")}<span>{t("education.highlight")}</span>
           </h4>
         </header>
 
@@ -40,11 +43,11 @@ export default function Education() {
 
           <div className={styles.ideBody}>
             <aside className={styles.sidebar}>
-              <div className={styles.sidebarTitle}>Explorer</div>
+              <div className={styles.sidebarTitle}>{t("education.explorer")}</div>
 
               <div className={styles.folder}>
                 <BiFile />
-                education
+                {t("education.folder")}
               </div>
 
               {files.map((file) => {
@@ -66,20 +69,20 @@ export default function Education() {
               <div className={styles.editorTab}>{activeFile}.ts</div>
 
               <div className={styles.codeArea}>
-                <span className={styles.comment}>// Education</span>
+                <span className={styles.comment}>// {t("education.comment")}</span>
                 <br />
                 <br />
                 <span className={styles.keyword}>export const</span>{" "}
                 <span className={styles.variable}>education</span> <b>= [</b>
                 <div className={styles.timeline}>
-                  {education.map((item) => (
+                  {education.map((item, index) => (
                     <article className={styles.educationCard} key={item.title}>
                       <div className={styles.icon}>
-                        <img src={item.image} alt={item.institution} title={`Logo do(a) ${item.institution}`} />
+                        <img src={item.image} alt={item.institution} title={t("education.imageTitle", { institution: item.institution })} />
                       </div>
 
                       <div className={styles.content}>
-                        <h3>{item.title}</h3>
+                        <h3>{translatedItems[index].title}</h3>
 
                         <h4>{item.institution}</h4>
 
@@ -93,12 +96,12 @@ export default function Education() {
                             {item.status === "Concluído" ? (
                               <>
                                 <BiCheckCircle />
-                                Concluído
+                                {t("education.statusDone")}
                               </>
                             ) : (
                               <>
                                 <BiTime />
-                                Em andamento
+                                {t("education.statusCurrent")}
                               </>
                             )}
                           </span>
@@ -106,7 +109,7 @@ export default function Education() {
                           {item.workload && <span>{item.workload}</span>}
                         </div>
 
-                        <p>{item.description}</p>
+                        <p>{translatedItems[index].description}</p>
                       </div>
                     </article>
                   ))}

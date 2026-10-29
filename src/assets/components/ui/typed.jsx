@@ -1,20 +1,15 @@
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Typing() {
     const el = useRef(null);
+    const { t, i18n } = useTranslation();
 
     useEffect(() => {
         const typed = new Typed(el.current, {
             strings: [
-                "Desenvolvedor Full-stack",
-                "React (Vite e CRA)",
-                "HTML e CSS",
-                "Bootstrap e SASS",
-                "JavaScript e TypeScript",
-                "express.js e NestJS",
-                "PostgreSQL",
-                "Computação em nuvem e AWS"
+                ...t("hero.typing", { returnObjects: true }),
             ],
             typeSpeed: 18,
             backSpeed: 20,
@@ -25,7 +20,7 @@ export default function Typing() {
         return () => {
             typed.destroy();
         };
-    }, []);
+    }, [i18n.language, t]);
 
     return <span ref={el}></span>;
 }

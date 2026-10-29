@@ -5,12 +5,15 @@ import { VscVerifiedFilled, VscWorkspaceTrusted } from "react-icons/vsc";
 import { badges, certificates } from "./data";
 import { createPortal } from "react-dom";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 export default function Achievements() {
   const [activeFile, setActiveFile] = useState("Badges");
   const [selectedAchievement, setSelectedAchievement] = useState(null);
   const [achievementsVisible, setachievementsVisible] = useState(
     Math.ceil(certificates.length / 2),
   );
+  const { t } = useTranslation();
+  const translatedItems = t("achievements.items", { returnObjects: true });
   const files = [
     {
       name: "badges.ts",
@@ -25,6 +28,8 @@ export default function Achievements() {
   ];
 
   const currentItems = activeFile === "Badges" ? badges : certificates;
+  const selectedIndex = certificates.indexOf(selectedAchievement);
+  const selectedTranslation = translatedItems[selectedIndex] || selectedAchievement || {};
   useEffect(() => {
     if (selectedAchievement) {
       const scrollbarWidth =
@@ -49,7 +54,7 @@ export default function Achievements() {
           <span className={styles.num}>//05</span>
 
           <h4>
-            Achieve<span>ments</span>
+            {t("achievements.title")}<span>{t("achievements.highlight")}</span>
           </h4>
         </header>
 
@@ -67,10 +72,10 @@ export default function Achievements() {
           </header>
           <div className={styles.ideBody}>
             <aside className={styles.sidebar}>
-              <div className={styles.sidebarTitle}>Explorer</div>
+              <div className={styles.sidebarTitle}>{t("achievements.explorer")}</div>
 
               <div className={styles.folder}>
-                <BiFile /> achievements
+                <BiFile /> {t("achievements.folder")}
               </div>
 
               {files.map((file) => {
@@ -98,7 +103,7 @@ export default function Achievements() {
               </div>
 
               <div className={styles.codeArea}>
-                <span className={styles.comment}>// {activeFile}</span>
+                <span className={styles.comment}>// {t("achievements.comment")}</span>
                 <br />
                 <br />
                 <span className={styles.keyword}>export const</span>{" "}
@@ -111,7 +116,7 @@ export default function Achievements() {
                         ? achievementsVisible
                         : currentItems.length,
                     )
-                    .map((item) => (
+                    .map((item, index) => (
                       <article
                         key={item.title}
                         className={styles.card}
@@ -122,7 +127,7 @@ export default function Achievements() {
                             <img
                               src={item.image}
                               alt={item.title}
-                              title="Imagem do certificado"
+                              title={t("achievements.imageTitle")}
                             />
                           ) : (
                             <div className={styles.placeholder}>🏅</div>
@@ -130,11 +135,11 @@ export default function Achievements() {
                         </div>
 
                         <div className={styles.cardContent}>
-                          <h3>{item.title}</h3>
+                          <h3>{activeFile === "Certificates" ? translatedItems[index].title : item.title}</h3>
 
-                          <p>{item.issuer}</p>
+                          <p>{activeFile === "Certificates" ? translatedItems[index].issuer : item.issuer}</p>
 
-                          <small>Emitido em {item.issued}</small>
+                          <small>{t("achievements.issued")} {item.issued}</small>
 
                           {"workload" in item && (
                             <small>• {item.workload}</small>
@@ -146,7 +151,7 @@ export default function Achievements() {
                             target="_blank"
                             rel="noreferrer"
                           >
-                            Ver credencial ↗
+                            {t("achievements.credential")}
                           </a>
                         </div>
                       </article>
@@ -166,11 +171,11 @@ export default function Achievements() {
                     >
                       {achievementsVisible >= certificates.length ? (
                         <>
-                          Ver menos <FaChevronUp />
+                          {t("achievements.less")} <FaChevronUp />
                         </>
                       ) : (
                         <>
-                          Ver mais <FaChevronDown />
+                          {t("achievements.more")} <FaChevronDown />
                         </>
                       )}
                     </button>
@@ -204,7 +209,7 @@ export default function Achievements() {
                     <img
                       src={selectedAchievement.image}
                       alt={selectedAchievement.title}
-                      title={`Imagem do certificado: ${selectedAchievement.title}`}
+                      title={`${t("achievements.imageTitle")}: ${selectedAchievement.title}`}
                     />
                   </div>
 
@@ -213,34 +218,34 @@ export default function Achievements() {
                       {activeFile === "Badges" ? (
                         <>
                           <BiBadge size={20} />
-                          Badge
+                          {t("achievements.badge")}
                         </>
                       ) : (
                         <>
                           <BiCertification size={20} />
-                          Certicação
+                          {t("achievements.certificate")}
                         </>
                       )}
                     </span>
 
-                    <h2>{selectedAchievement.title}</h2>
+                    <h2>{selectedTranslation.title}</h2>
 
-                    <h4>{selectedAchievement.issuer}</h4>
+                    <h4>{selectedTranslation.issuer}</h4>
 
                     <div className={styles.modalMeta}>
                       <span>
-                        <strong>Emitido:</strong> {selectedAchievement.issued}
+                        <strong>{t("achievements.issued")}:</strong> {selectedAchievement.issued}
                       </span>
 
                       {"workload" in selectedAchievement && (
                         <span>
-                          <strong>Carga horária:</strong>{" "}
+                          <strong>{t("achievements.workload")}</strong>{" "}
                           {selectedAchievement.workload}
                         </span>
                       )}
                     </div>
 
-                    <p>{selectedAchievement.description}</p>
+                    <p>{selectedTranslation.description}</p>
 
                     <a
                       href={selectedAchievement.credential}
@@ -249,7 +254,7 @@ export default function Achievements() {
                       style={{ cursor: "pointer" }}
                     >
                       <button className={styles.modalButton}>
-                        Ver credencial ↗
+                        {t("achievements.credential")}
                       </button>
                     </a>
                   </div>

@@ -3,6 +3,7 @@
 .header {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   padding: 1rem;
   z-index: 4;
   position: sticky;
@@ -24,6 +25,40 @@
 .nav {
   display: flex;
   gap: 1rem;
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--muted-foreground);
+  font-family: var(--font-space-grotesk);
+}
+
+.languageLabel {
+  color: var(--primary);
+  font-size: 0.75rem;
+}
+
+.languageIcon {
+  color: #00ff66;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.language select {
+  background: transparent;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  color: var(--primary);
+  cursor: pointer;
+  font: inherit;
+  padding: 0.25rem 0.35rem;
+}
+
+.language option {
+  background: #050505;
+  color: var(--primary);
 }
 
 .link {
@@ -83,6 +118,10 @@
   padding: 16px;
 }
 
+.contentMobile .language {
+  margin: 0.5rem 0 1rem;
+}
+
 @keyframes mobileMenu {
   from {
     opacity: 0;
@@ -111,6 +150,9 @@
   }
 
   .nav {
+    display: none;
+  }
+  .languageSelector {
     display: none;
   }
 }

@@ -1,6 +1,5 @@
 import catalogo from "../../files/imgs-projects/b&b.png";
 import pokemonSearch from "../../files/imgs-projects/pokemon-search.png";
-// import birthdayOrg from "../../files/imgs-projects/birthday-oganization.png";
 import worldCountries from "../../files/imgs-projects/world-countries.png";
 import gateboard from "../../files/imgs-projects/gateboard.png";
 // import portfolio from "../../files/imgs-projects/portfolio.png";
@@ -11,6 +10,7 @@ import trocso from "../../files/imgs-projects/trocso.png";
 import blogTulioDev from "../../files/imgs-projects/blog_tuliodev.png";
 import estuda from "../../files/imgs-projects/estuda.png";
 import festeja from "../../files/imgs-projects/festeja.png";
+import lceki from "../../files/imgs-projects/lceki.png"
 export const allProjects = [
   {
     img: blogTulioDev,
@@ -29,6 +29,14 @@ export const allProjects = [
     href: "https://estuda.tuliodiegodev.com.br",
     repo: null,
     techs: ["Next", "TypeScript", "TailwindCSS"],
+  },
+  {
+    img: lceki,
+    name: "Lceki Page",
+    description: "Site/portfólio do youtuber de platinas Lceki",
+    href: "https://lceki.vercel.app/",
+    repo: null,
+    techs: ["React, TypeScript, TailwindCSS"]
   },
   {
     img: trocso,

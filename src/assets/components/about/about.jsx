@@ -12,8 +12,10 @@ import {
   FaBookOpen,
 } from "react-icons/fa";
 import { LuFocus } from "react-icons/lu";
+import { useTranslation } from "react-i18next";
 
 export default function About() {
+  const { t } = useTranslation();
   return (
     <div className={styles.container} id="aboutme">
       <div className={styles.content}>
@@ -21,39 +23,27 @@ export default function About() {
           <span className={styles.num}>//01</span>
 
           <h4>
-            Sobre <span>mim</span>
+            {t("about.title")} <span>{t("about.highlight")}</span>
           </h4>
         </header>
 
         <section className={styles.gridInfos}>
           <div className={styles.text}>
             <p>
-              Me chamo <b>Túlio Diego</b>, sou{" "}
-              <span>Desenvolvedor Front-end</span> apaixonado por criar
-              interfaces modernas, responsivas e intuitivas. Tenho experiência
-              no desenvolvimento de aplicações utilizando <span>React</span>,
-              <span> TypeScript</span>, <span>HTML5</span> e <span>CSS3</span>,
-              sempre buscando escrever código limpo, reutilizável e de fácil
-              manutenção.
+              {t("about.intro")}
               <br />
               <br />
-              Também trabalho com integração de <span>APIs REST</span>,{" "}
-              <span>Supabase</span> e versionamento com <span>Git/GitHub</span>.
+              {t("about.api")}
               <br />
               <br />
-              Atualmente estou aprofundando meus conhecimentos em{" "}
-              <span>AWS</span>, <span>NestJS</span>,<span> Docker</span> e
-              arquitetura de software, buscando evoluir para o desenvolvimento
-              Full Stack.
+              {t("about.cloud")}
               <br />
               <br />
-              Meu objetivo é conquistar minha primeira oportunidade como
-              desenvolvedor e contribuir com projetos que gerem impacto real.
+              {t("about.objective")}
             </p>
 
             <blockquote className={styles.quote}>
-              "Acredito que tecnologia é mais do que código: é a capacidade de
-              transformar problemas em soluções simples e úteis."
+              {t("about.quote")}
             </blockquote>
           </div>
         </section>
@@ -65,29 +55,29 @@ export default function About() {
               <div className={styles.dotYellow}></div>
               <div className={styles.dotGreen}></div>
 
-              <em>developer-profile</em>
+              <em>{t("about.profile")}</em>
             </div>
 
             <div className={styles.contentTerminal}>
               <p>
-                <FaUser /> <span>Nome:</span> <b>Túlio Diego</b>
+                <FaUser /> <span>{t("about.fields.name")}</span> <b>Túlio Diego</b>
               </p>
 
               <p>
-                <FaLaptopCode /> <span>Cargo:</span> <b>Front-end Developer</b>
+                <FaLaptopCode /> <span>{t("about.fields.role")}</span> <b>{t("about.values.role")}</b>
               </p>
 
               <p>
-                <FaMapMarkerAlt /> <span>Local:</span> <b>Pernambuco, Brasil</b>
+                <FaMapMarkerAlt /> <span>{t("about.fields.location")}</span> <b>Pernambuco, Brasil</b>
               </p>
 
               <p>
-                <FaBullseye /> <span>Objetivo:</span>{" "}
-                <b>Estágio / Desenvolvedor Júnior</b>
+                <FaBullseye /> <span>{t("about.fields.objective")}</span>{" "}
+                <b>{t("about.values.objective")}</b>
               </p>
 
               <p>
-                <FaBookOpen /> <span>Inglês:</span> <b>B1 - Intermediário</b>
+                <FaBookOpen /> <span>{t("about.fields.english")}</span> <b>{t("about.values.english")}</b>
               </p>
             </div>
           </article>
@@ -97,25 +87,25 @@ export default function About() {
               <div className={styles.dotYellow}></div>
               <div className={styles.dotGreen}></div>
 
-              <em>current-status</em>
+              <em>{t("about.status")}</em>
             </div>
 
             <div className={styles.contentTerminal}>
               <p>
-                <FaRocket /> <span>Status:</span> <b>Disponível para estágio</b>
+                <FaRocket /> <span>{t("about.fields.status")}</span> <b>{t("about.values.status")}</b>
               </p>
 
               <p>
-                <FaCloud /> <span>Estudando:</span> <b>AWS Cloud Computing</b>
+                <FaCloud /> <span>{t("about.fields.studying")}</span> <b>{t("about.values.studying")}</b>
               </p>
 
               <p>
-                <FaBookOpen /> <span>Aprendendo:</span>{" "}
-                <b>NestJS • Docker • Arquitetura</b>
+                <FaBookOpen /> <span>{t("about.fields.learning")}</span>{" "}
+                <b>{t("about.values.learning")}</b>
               </p>
 
               <p>
-                <LuFocus /> <span>Foco:</span> <b>Desenvolvimento Fullstack</b>
+                <LuFocus /> <span>{t("about.fields.focus")}</span> <b>{t("about.values.focus")}</b>
               </p>
             </div>
           </article>

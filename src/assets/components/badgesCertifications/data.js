@@ -37,6 +37,13 @@ export const badges = [
 ];
 
 export const certificates = [
+   {
+    title: "Programa AWS re/Start, IA e No Code",
+    issuer: "Escola da Nuvem",
+    workload: "270h",
+    image: ednCertified,
+    credential: "https://www.linkedin.com/feed/update/urn:li:activity:7491984206965841920/"
+  },
   {
     title: "Programa AWS re/Start, IA e No Code",
     issuer: "Escola da Nuvem",

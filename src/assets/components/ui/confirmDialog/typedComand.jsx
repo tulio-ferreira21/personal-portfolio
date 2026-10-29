@@ -1,15 +1,17 @@
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function TypedComand({ action, onClose }) {
     const el = useRef(null);
+    const { t, i18n } = useTranslation();
 
     useEffect(() => {
         if (!el.current) return;
 
         let text = `
-running download_cv()...
-select language:
+    ${t("cv.running")}
+    ${t("cv.select")}
 > ${action === 'pt-br'
                 ? 'pt-br\n sudo apt install curriculo\ninstalling...'
                 : action === 'en'
@@ -27,7 +29,7 @@ select language:
             onComplete: () => {
                 if (action) {
                     setTimeout(() => {
-                        el.current.innerHTML += "\ndownload done! ✓";
+                        el.current.innerHTML += `\n${t("cv.done")}`;
 
                         const link = document.createElement('a')
                         link.href = action === 'pt-br' ?
@@ -44,7 +46,7 @@ select language:
         });
 
         return () => typed.destroy();
-    }, [action]);
+    }, [action, i18n.language, t, onClose]);
 
     return (
         <div>

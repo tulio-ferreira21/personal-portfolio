@@ -4,11 +4,14 @@ import { FiExternalLink } from "react-icons/fi";
 import { allProjects } from "./data";
 import { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 export default function Projects() {
   const [projectsVisible, setProjectsVisible] = useState(
     allProjects.length / 2,
   );
+  const { t } = useTranslation();
+  const translatedDescriptions = t("projects.items", { returnObjects: true });
   return (
     <>
       <div className={styles.container} id="projects">
@@ -16,21 +19,21 @@ export default function Projects() {
           <header className={styles.containerHeader}>
             <span className={styles.num}>//04</span>
             <h4>
-              Meus <span>Projetos</span>
+              {t("projects.title")} <span>{t("projects.highlight")}</span>
             </h4>
           </header>
           <div className={styles.wrapper}>
             <section className={styles.projects}>
               <aside>
-                <span>$~/user:</span> ls -l projects/
+                <span>$~/user:</span> {t("projects.command")}
               </aside>
               <div className={styles.gridProjects}>
                 {allProjects.slice(0, projectsVisible).map((project, index) => (
                   <div key={index} className={styles.cardProject}>
                     <img
                       src={project.img}
-                      alt={`Imagem do projeto ${project.name}`}
-                      title={`Imagem do projeto ${project.name}`}
+                      alt={t("projects.imageAlt", { name: project.name })}
+                      title={t("projects.imageAlt", { name: project.name })}
                     />
                     <header>
                       <h3>{project.name}</h3>
@@ -39,7 +42,7 @@ export default function Projects() {
                           <a
                             href={project.repo}
                             target="_blank"
-                            title="Ir ao repositório"
+                            title={t("projects.repoTitle")}
                           >
                             <SiGithub size={30} />
                           </a>
@@ -49,13 +52,13 @@ export default function Projects() {
                         <a
                           href={project.href}
                           target="_blank"
-                          title="Ir ao site"
+                          title={t("projects.siteTitle")}
                         >
                           <FiExternalLink size={30} />
                         </a>
                       </div>
                     </header>
-                    <p>{project.description}</p>
+                    <p>{translatedDescriptions[index]}</p>
                     <div className={styles.techs}>
                       {project.techs.map((tech) => (
                         <div className={styles.tech}>{tech}</div>
@@ -77,11 +80,11 @@ export default function Projects() {
                 >
                   {projectsVisible >= allProjects.length ? (
                     <>
-                      Ver menos <FaChevronUp />
+                      {t("projects.less")} <FaChevronUp />
                     </>
                   ) : (
                     <>
-                      Ver mais <FaChevronDown />
+                      {t("projects.more")} <FaChevronDown />
                     </>
                   )}
                 </button>
