@@ -21,6 +21,7 @@ export const allProjects = [
     repo: null,
     techs: ["React", "TypeScript", "Tailwind CSS"],
   },
+  {},
   {
     img: estuda,
     name: "Estuda.",
