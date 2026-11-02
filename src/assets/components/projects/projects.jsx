@@ -14,7 +14,7 @@ export default function Projects() {
   const translatedDescriptions = t("projects.items", { returnObjects: true });
   return (
     <>
-      <div className={styles.container} id="projects">
+      <div className={`section ${styles.container}`} id="projects">
         <main>
           <header className={styles.containerHeader}>
             <span className={styles.num}>//04</span>
@@ -60,7 +60,7 @@ export default function Projects() {
                     </header>
                     <p>{translatedDescriptions[index]}</p>
                     <div className={styles.techs}>
-                      {project.techs.map((tech) => (
+                      {project.techs?.map((tech) => (
                         <div className={styles.tech}>{tech}</div>
                       ))}
                     </div>

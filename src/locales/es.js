@@ -14,7 +14,7 @@ const es = {
     viewProjects: "ver_proyectos()",
     downloadCv: "descargar_cv()",
     imageAlt: "Túlio Diego",
-    imageTitle: "Imagen de Túlio Diego",
+    imageTitle: "Imagen del propietario: Túlio Diego",
     typing: [
       "Desarrollador Fullstack",
       "React (Vite y CRA)",
@@ -32,10 +32,10 @@ const es = {
     profile: "developer-profile",
     status: "current-status",
     intro:
-      "Me llamo Túlio Diego. Soy desarrollador Frontend y me apasiona crear interfaces modernas, adaptables e intuitivas. Tengo experiencia desarrollando aplicaciones con React, TypeScript, HTML5 y CSS3, siempre buscando escribir código limpio, reutilizable y fácil de mantener.",
+      "Me llamo Túlio Diego, soy desarrollador Frontend y me apasiona crear interfaces modernas, adaptables e intuitivas. Tengo experiencia desarrollando aplicaciones con React, TypeScript, HTML5 y CSS3, siempre buscando escribir código limpio, reutilizable y fácil de mantener.",
     api: "También trabajo con la integración de API REST, Supabase y control de versiones con Git/GitHub.",
     cloud:
-      "Actualmente estoy profundizando mis conocimientos en AWS, NestJS, Docker y arquitectura de software, con el objetivo de crecer profesionalmente hacia el desarrollo Fullstack.",
+      "Actualmente estoy profundizando mis conocimientos en AWS, NestJS, Docker y arquitectura de software, con el objetivo de evolucionar hacia el desarrollo Fullstack.",
     objective:
       "Mi objetivo es conseguir mi primera oportunidad profesional como desarrollador y contribuir a proyectos que generen un impacto real.",
     quote:
@@ -65,7 +65,7 @@ const es = {
     title: "Educa",
     highlight: "ción",
     explorer: "Explorador",
-    folder: "educación",
+    folder: "education",
     comment: "Educación",
     statusDone: "Completado",
     statusCurrent: "En curso",
@@ -75,6 +75,11 @@ const es = {
         title: "Técnico en Informática para Internet | Educación secundaria",
         description:
           "Formación técnica centrada en desarrollo web, programación, bases de datos, redes informáticas, mantenimiento de equipos y desarrollo de aplicaciones adaptables.",
+      },
+      {
+        title: "Grado en Ciencias de la Computación",
+        description:
+          "Formación universitaria centrada en el estudio de algoritmos, estructuras de datos, ingeniería de software, bases de datos, inteligencia artificial, computación en la nube y desarrollo de sistemas.",
       },
       {
         title: "Programa AWS re/Start",
@@ -94,8 +99,8 @@ const es = {
     highlight: "Proyectos",
     command: "ls -l projects/",
     imageAlt: "Imagen del proyecto {{name}}",
-    repoTitle: "Abrir repositorio",
-    siteTitle: "Abrir sitio web",
+    repoTitle: "Ir al repositorio",
+    siteTitle: "Ir al sitio web",
     more: "Ver más",
     less: "Ver menos",
     items: [
@@ -106,9 +111,9 @@ const es = {
       "Plataforma para intercambiar y ofrecer productos obsoletos.",
       "Plataforma para gestionar una biblioteca personal de videojuegos.",
       "Aplicación que consume la PokéAPI para buscar y mostrar Pokémon.",
-      "Plataforma que facilita la planificación y organización de fiestas.",
+      "Plataforma que facilita la organización de fiestas.",
       "Aplicación React que consume una API para mostrar países en un mapa interactivo.",
-      "Plataforma Kanban con autenticación en el frontend y persistencia de datos mediante localStorage.",
+      "Plataforma Kanban con autenticación en el frontend y persistencia mediante localStorage.",
       "Juego de simulación de gestión deportiva creado para el hackathon de ZK Gaming.",
       "Catálogo web para mostrar productos con integración con Supabase.",
     ],
@@ -117,10 +122,10 @@ const es = {
     title: "Logros",
     highlight: "",
     explorer: "Explorador",
-    folder: "logros",
+    folder: "achievements",
     comment: "Logros",
     badge: "Insignia",
-    certificate: "Certificado",
+    certificate: "Certificación",
     issued: "Emitido el",
     workload: "Carga horaria:",
     credential: "Ver credencial ↗",
@@ -141,16 +146,15 @@ const es = {
           "Certificado de formación en Git y GitHub, centrado en flujos de trabajo colaborativos y pull requests.",
       },
       {
-        title: "Desarrollo Backend con Express.js",
+        title: "Backend con Express.js",
         issuer: "Kodie Academy",
         description:
           "Certificado de formación en desarrollo backend con Express.js.",
       },
       {
-        title: "Ejecutor de la II Jornada REPE - Inova.ai/SECTi-PE",
+        title: "Participante de la II Jornada REPE - Inova.ai/SECTi-PE",
         issuer: "Secretaría de Ciencia y Tecnología de Pernambuco",
-        description:
-          "Participación en la II Jornada REPE - Inova.ai/SECTi-PE.",
+        description: "Participación en la II Jornada REPE - Inova.ai/SECTi-PE.",
       },
       {
         title: "Git y GitHub",
@@ -180,7 +184,7 @@ const es = {
     description:
       "Siempre estoy abierto a nuevas oportunidades, proyectos interesantes y conversaciones sobre tecnología. Si tienes una idea o quieres trabajar conmigo, pongámonos en contacto.",
     name: "Nombre",
-    email: "Correo electrónico",
+    email: "Dirección de correo electrónico",
     message: "Mensaje...",
     nameVariable: "nombre",
     emailVariable: "correo",
@@ -195,7 +199,7 @@ const es = {
   },
   footer: {
     description:
-      "Desarrollador Fullstack centrado en crear plataformas y sitios web modernos y completos.",
+      "Desarrollador Fullstack centrado en el desarrollo integral de plataformas y sitios web modernos.",
     navigation: "Navegación",
     technologies: "Tecnologías",
     connect: "Conecta conmigo",

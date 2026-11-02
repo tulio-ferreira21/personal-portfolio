@@ -20,7 +20,7 @@ export default function Education() {
   ];
 
   return (
-    <section className={styles.container} id="education">
+    <section className={`section ${styles.container}`} id="education">
       <main>
         <header className={styles.containerHeader}>
           <span className={styles.num}>//02 </span>

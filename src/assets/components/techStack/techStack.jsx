@@ -8,7 +8,7 @@ export default function TechStack() {
   const currentTechs = techs.filter((tech) => tech.type === activeFile);
 
   return (
-    <div className={styles.container} id="stacks">
+    <div className={`section styles.container`} id="stacks">
       <main>
         <header className={styles.containerHeader}>
           <span className={styles.num}>//03</span>

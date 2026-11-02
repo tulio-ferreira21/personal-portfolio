@@ -10,11 +10,11 @@ const en = {
   hero: {
     greeting: "Hi, I'm",
     description:
-      "Fullstack Developer passionate about creating modern, responsive, and functional systems using React, TypeScript, Express.js, Nest.js, and Cloud technologies.",
+      "Fullstack Developer passionate about building modern, responsive, and functional systems using React, TypeScript, Express.js, Nest.js, and Cloud technologies.",
     viewProjects: "view_projects()",
     downloadCv: "download_cv()",
     imageAlt: "Túlio Diego",
-    imageTitle: "Owner image: Túlio Diego",
+    imageTitle: "Owner's image: Túlio Diego",
     typing: [
       "Full-stack Developer",
       "React (Vite and CRA)",
@@ -32,12 +32,12 @@ const en = {
     profile: "developer-profile",
     status: "current-status",
     intro:
-      "My name is Túlio Diego. I am a Front-end Developer passionate about creating modern, responsive, and intuitive interfaces. I have experience building applications with React, TypeScript, HTML5, and CSS3, always striving to write clean, reusable, and maintainable code.",
-    api: "I also work with REST API integration, Supabase, and version control with Git/GitHub.",
+      "My name is Túlio Diego. I am a Front-end Developer passionate about building modern, responsive, and intuitive interfaces. I have experience developing applications with React, TypeScript, HTML5, and CSS3, always striving to write clean, reusable, and maintainable code.",
+    api: "I also work with REST API integration, Supabase, and version control using Git/GitHub.",
     cloud:
-      "I am currently deepening my knowledge of AWS, NestJS, Docker, and software architecture, aiming to grow into Full Stack development.",
+      "I am currently expanding my knowledge of AWS, NestJS, Docker, and software architecture, aiming to grow into Fullstack development.",
     objective:
-      "My goal is to earn my first opportunity as a developer and contribute to projects that create real impact.",
+      "My goal is to secure my first professional opportunity as a developer and contribute to projects that make a real impact.",
     quote:
       "I believe technology is more than code: it is the ability to turn problems into simple and useful solutions.",
     fields: {
@@ -55,7 +55,7 @@ const en = {
       role: "Front-end Developer",
       objective: "Internship / Junior Developer",
       english: "B1 - Intermediate",
-      status: "Available for an internship",
+      status: "Available for internships",
       studying: "AWS Cloud Computing",
       learning: "NestJS • Docker • Architecture",
       focus: "Fullstack Development",
@@ -74,7 +74,12 @@ const en = {
       {
         title: "Technical Degree in Internet Computing | High School",
         description:
-          "Technical training focused on web development, programming, databases, computer networks, computer maintenance, and responsive application development.",
+          "Technical education focused on web development, programming, databases, computer networks, computer maintenance, and responsive application development.",
+      },
+      {
+        title: "Bachelor's Degree in Computer Science",
+        description:
+          "Undergraduate program focused on algorithms, data structures, software engineering, databases, artificial intelligence, cloud computing, and systems development.",
       },
       {
         title: "AWS re/Start Program",
@@ -94,21 +99,21 @@ const en = {
     highlight: "Projects",
     command: "ls -l projects/",
     imageAlt: "Project image {{name}}",
-    repoTitle: "Open repository",
-    siteTitle: "Open website",
+    repoTitle: "Go to repository",
+    siteTitle: "Go to website",
     more: "Show more",
     less: "Show less",
     items: [
       "Technology blog created to share knowledge about software development and other related topics.",
       "Platform for organizing and planning study sessions.",
-      "Portfolio website for Lceki, a content creator and platinum trophy YouTuber.",
+      "Portfolio website for Lceki, a content creator and YouTuber specializing in platinum trophies.",
       "Platform for organizing crochet projects and pieces.",
       "Platform for exchanging and offering obsolete products.",
       "Personal video game library platform.",
       "App that consumes the PokéAPI to search for and display Pokémon.",
-      "Platform that simplifies party planning and organization.",
-      "React app that consumes an API to list countries with an interactive map.",
-      "Kanban platform with frontend authentication and localStorage persistence.",
+      "Platform that simplifies party organization.",
+      "React app that consumes an API to display countries on an interactive map.",
+      "Kanban platform with frontend authentication and data persistence using localStorage.",
       "Manager simulation game created for the ZK Gaming Hackathon.",
       "Web catalog for showcasing products with Supabase integration.",
     ],
@@ -120,7 +125,7 @@ const en = {
     folder: "achievements",
     comment: "Achievements",
     badge: "Badge",
-    certificate: "Certificate",
+    certificate: "Certification",
     issued: "Issued on",
     workload: "Workload:",
     credential: "View credential ↗",
@@ -138,19 +143,19 @@ const en = {
         title: "Git and GitHub: From Beginner to Pull Request",
         issuer: "IFPE, UFRPE & UABJ",
         description:
-          "Certificate of training in Git and GitHub, focused on collaborative workflows and pull requests.",
+          "Training certificate in Git and GitHub, focused on collaborative workflows and pull requests.",
       },
       {
         title: "Backend Development with Express.js",
         issuer: "Kodie Academy",
         description:
-          "Certificate of backend development training with Express.js.",
+          "Certificate of training in backend development with Express.js.",
       },
       {
-        title: "Executor of the II REPE Journey - Inova.ai/SECTi-PE",
+        title: "Participant of the II REPE Conference - Inova.ai/SECTi-PE",
         issuer: "Pernambuco Department of Science and Technology",
         description:
-          "Participation in the II REPE Journey - Inova.ai/SECTi-PE.",
+          "Participation in the II REPE Conference - Inova.ai/SECTi-PE.",
       },
       {
         title: "Git and GitHub",
@@ -178,7 +183,7 @@ const en = {
     title: "Let's",
     highlight: "Talk",
     description:
-      "I am always open to new opportunities, interesting projects, and conversations about technology. If you have an idea or want to work together, let's connect.",
+      "I am always open to new opportunities, interesting projects, and conversations about technology. If you have an idea or would like to work together, let's connect.",
     name: "Name",
     email: "Email address",
     message: "Message...",
@@ -188,9 +193,9 @@ const en = {
     send: " send_message()",
     sending: "sending( )...",
     allFields: "Please fill in all fields",
-    invalidEmail: "Invalid email",
+    invalidEmail: "Invalid email address",
     sent: "Message sent",
-    error: "Sending failed",
+    error: "Failed to send message",
     subject: "Contact from Portfolio",
   },
   footer: {
@@ -202,7 +207,7 @@ const en = {
     rights: "All rights reserved",
   },
   cv: {
-    choose: "Choose the language of the résumé",
+    choose: "Choose your résumé language",
     pt: "PT-BR",
     en: "EN",
     running: "running download_cv()...",

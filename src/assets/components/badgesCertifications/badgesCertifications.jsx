@@ -48,7 +48,7 @@ export default function Achievements() {
     };
   }, [selectedAchievement]);
   return (
-    <section className={styles.container} id="achievements">
+    <section className={`section ${styles.container}`} id="achievements">
       <main>
         <header className={styles.containerHeader}>
           <span className={styles.num}>//05</span>
@@ -135,9 +135,9 @@ export default function Achievements() {
                         </div>
 
                         <div className={styles.cardContent}>
-                          <h3>{activeFile === "Certificates" ? translatedItems[index].title : item.title}</h3>
+                          <h3>{activeFile === "Certificates" ? translatedItems[index]?.title : item.title}</h3>
 
-                          <p>{activeFile === "Certificates" ? translatedItems[index].issuer : item.issuer}</p>
+                          <p>{activeFile === "Certificates" ? translatedItems[index]?.issuer : item.issuer}</p>
 
                           <small>{t("achievements.issued")} {item.issued}</small>
 

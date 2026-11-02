@@ -6,7 +6,7 @@
   flex-direction: column;
 
   border-bottom: 1px solid var(--muted);
-  min-height: 100vh;
+  min-height: 100dvh;
 
   overflow-x: none;
 }

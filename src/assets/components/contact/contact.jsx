@@ -48,7 +48,7 @@ export default function Contact() {
   }
   return (
     <>
-      <div className={styles.container} id="contact">
+      <div className={`section ${styles.container}`} id="contact">
         <main>
           <header className={styles.containerHeader}>
             <span className={styles.num}>//06</span>

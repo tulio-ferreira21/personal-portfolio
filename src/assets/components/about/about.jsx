@@ -17,7 +17,7 @@ import { useTranslation } from "react-i18next";
 export default function About() {
   const { t } = useTranslation();
   return (
-    <div className={styles.container} id="aboutme">
+    <div className={`section__about ${styles.container}`} id="aboutme">
       <div className={styles.content}>
         <header className={styles.containerHeader}>
           <span className={styles.num}>//01</span>
@@ -27,24 +27,33 @@ export default function About() {
           </h4>
         </header>
 
-        <section className={styles.gridInfos}>
-          <div className={styles.text}>
-            <p>
-              {t("about.intro")}
-              <br />
-              <br />
-              {t("about.api")}
-              <br />
-              <br />
-              {t("about.cloud")}
-              <br />
-              <br />
-              {t("about.objective")}
-            </p>
+        <section>
+          <div className={styles.gridInfos}>
+            <div className={styles.text}>
+              <p>
+                {t("about.intro")}
+                <br />
+                <br />
+                {t("about.api")}
+                <br />
+                <br />
+                {t("about.cloud")}
+                <br />
+                <br />
+                {t("about.objective")}
+              </p>
 
-            <blockquote className={styles.quote}>
-              {t("about.quote")}
-            </blockquote>
+              <blockquote className={styles.quote}>
+                {t("about.quote")}
+              </blockquote>
+            </div>
+            {/**
+             * <div className={styles.vetor}>
+              <div className={styles.circle}></div>
+              <div className={styles.circle}></div>
+              <div className={styles.circle}></div>
+            </div>
+             */}
           </div>
         </section>
 
@@ -60,15 +69,18 @@ export default function About() {
 
             <div className={styles.contentTerminal}>
               <p>
-                <FaUser /> <span>{t("about.fields.name")}</span> <b>Túlio Diego</b>
+                <FaUser /> <span>{t("about.fields.name")}</span>{" "}
+                <b>Túlio Diego</b>
               </p>
 
               <p>
-                <FaLaptopCode /> <span>{t("about.fields.role")}</span> <b>{t("about.values.role")}</b>
+                <FaLaptopCode /> <span>{t("about.fields.role")}</span>{" "}
+                <b>{t("about.values.role")}</b>
               </p>
 
               <p>
-                <FaMapMarkerAlt /> <span>{t("about.fields.location")}</span> <b>Pernambuco, Brasil</b>
+                <FaMapMarkerAlt /> <span>{t("about.fields.location")}</span>{" "}
+                <b>Pernambuco, Brasil</b>
               </p>
 
               <p>
@@ -77,7 +89,8 @@ export default function About() {
               </p>
 
               <p>
-                <FaBookOpen /> <span>{t("about.fields.english")}</span> <b>{t("about.values.english")}</b>
+                <FaBookOpen /> <span>{t("about.fields.english")}</span>{" "}
+                <b>{t("about.values.english")}</b>
               </p>
             </div>
           </article>
@@ -92,11 +105,13 @@ export default function About() {
 
             <div className={styles.contentTerminal}>
               <p>
-                <FaRocket /> <span>{t("about.fields.status")}</span> <b>{t("about.values.status")}</b>
+                <FaRocket /> <span>{t("about.fields.status")}</span>{" "}
+                <b>{t("about.values.status")}</b>
               </p>
 
               <p>
-                <FaCloud /> <span>{t("about.fields.studying")}</span> <b>{t("about.values.studying")}</b>
+                <FaCloud /> <span>{t("about.fields.studying")}</span>{" "}
+                <b>{t("about.values.studying")}</b>
               </p>
 
               <p>
@@ -105,7 +120,8 @@ export default function About() {
               </p>
 
               <p>
-                <LuFocus /> <span>{t("about.fields.focus")}</span> <b>{t("about.values.focus")}</b>
+                <LuFocus /> <span>{t("about.fields.focus")}</span>{" "}
+                <b>{t("about.values.focus")}</b>
               </p>
             </div>
           </article>

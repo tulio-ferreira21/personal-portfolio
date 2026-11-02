@@ -19,7 +19,7 @@ export default function Hero() {
         <ConfirmDialog onClose={() => setConfirmDialog(false)} />
       )}
 
-      <section className={styles.hero}>
+      <section className={`section ${styles.hero}`}>
         <div className={styles.overlay}></div>
         <div className={styles.blur1}></div>
         <div className={styles.blur2}></div>
